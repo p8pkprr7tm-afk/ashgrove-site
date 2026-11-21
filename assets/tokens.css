@@ -1,0 +1,30 @@
+/* Ashgrove Strata Advisors design tokens */
+:root, [data-theme="light"] {
+  --evergreen-900: #143528;
+  --evergreen-700: #1F4D3A;
+  --Green: #308049;
+  --sage-300: #A8C5B5;
+  --mist-100: #E8F0EB;
+  --paper-050: #F7F6F2;
+  --surface: #FFFFFF;
+  --ink-900: #18221D;
+  --ink-600: #55655C;
+  --line-200: #D9E0DB;
+  --brass-600: #8A6B3E;
+  --critical-600: #B42318;
+}
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 80px;
+  --space-8: 128px;
+  --radius-0: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: Inter, "Helvetica Neue", Arial, sans-serif;
+}

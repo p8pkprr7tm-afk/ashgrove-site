@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Depreciation Reports for BC Strata Corporations | Ashgrove Strata Advisors</title>
+<meta name="description" content="Depreciation reports (reserve fund studies) for BC townhouse, low-rise and high-rise stratas, by an Accredited Appraiser (AACI, MRICS). Fixed fees from $2,000. Metro Vancouver and Fraser Valley.">
+<script src="assets/ashgrove-3d.js"></script>
+<link rel="stylesheet" href="assets/tokens.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6F2}
+a{color:#308049}a:hover{color:#1F4D3A}
+
+/* Sticky header: fixed to the top, page content starts below it */
+main{padding-top:117px}
+[id]{scroll-margin-top:136px}
+.mnav{display:none}
+.nl{position:relative}
+.nl::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--evergreen-700);transform:scaleX(0);transform-origin:left}
+.nl[aria-current="page"]{color:var(--evergreen-700)!important;font-weight:600}
+.nl[aria-current="page"]::after{transform:scaleX(1)}
+.ft a{color:var(--mist-100);text-decoration:none}
+.chip{display:inline-block;padding:8px 14px;border:1px solid var(--line-200);border-radius:999px;font-size:14px;line-height:20px;color:var(--ink-900);background:var(--surface);text-decoration:none}
+a.chip{color:var(--evergreen-700);font-weight:600}
+a.chip:hover{border-color:var(--evergreen-700);background:#E8F0EB}
+a.card{text-decoration:none;color:var(--ink-900)}
+a.card:hover h3{color:var(--evergreen-700)}
+.bc a{color:var(--ink-600)}
+.ft a:hover{color:#FFFFFF;text-decoration:underline}
+
+.if-pm,.if-agm,.if-sec{display:none!important}
+form:has(select[name="sections"] option[value="yes"]:checked) .if-sec{display:flex!important}
+form:has(select[name="managed"] option[value="pm"]:checked) .if-pm{display:flex!important}
+form:has(select[name="timing"] option[value="agm"]:checked) .if-agm{display:flex!important}
+
+/* Motion */
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@keyframes drift{from{transform:scale(1.12)}to{transform:scale(1)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion: no-preference){
+ html{scroll-behavior:smooth}
+ #top>div>div:first-child>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+ #top>div>div:first-child>*:nth-child(1){animation-delay:.05s}
+ #top>div>div:first-child>*:nth-child(2){animation-delay:.15s}
+ #top>div>div:first-child>*:nth-child(3){animation:grow .8s .35s cubic-bezier(.2,.7,.2,1) both;transform-origin:left}
+ #top>div>div:first-child>*:nth-child(4){animation-delay:.4s}
+ #top>div>div:first-child>*:nth-child(5){animation-delay:.5s}
+ #top>div>div:first-child>*:nth-child(6){animation-delay:.6s}
+ #top>div>div:first-child>*:nth-child(7){animation-delay:.7s}
+ #top>div>div:last-child{animation:fadein 1.2s .2s ease backwards}
+ #top>div>div:last-child img{animation:drift 14s ease-out both}
+ .ph>div>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+ .ph>div>*:nth-child(2){animation-delay:.1s}
+ .ph>div>*:nth-child(3){animation-delay:.2s}
+ .ph>div>*:nth-child(4){animation-delay:.3s}
+
+ /* hover */
+ .nl,.btn-p,.btn-o,.nav-cta{transition:background-color .25s,color .25s,transform .25s,box-shadow .25s}
+ .nl::after{transition:transform .3s}
+ .nl:hover::after{transform:scaleX(1)}
+ .btn-p:hover,.nav-cta:hover{background:#163A2B!important;color:#FFFFFF!important;transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,77,58,.25)}
+ .btn-o:hover{background:var(--evergreen-700)!important;color:#FFFFFF!important}
+ .btn-w:hover{background:#FFFFFF!important;color:var(--evergreen-900)!important}
+ figure [style*="aspect-ratio: 4 / 3"] img,#services [style*="aspect-ratio: 4 / 3"] img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+ figure:hover [style*="aspect-ratio: 4 / 3"] img,#services [style*="aspect-ratio: 4 / 3"]:hover img{transform:scale(1.06)}
+ .card{transition:transform .3s,border-color .3s}
+ .card:hover{transform:translateY(-4px)}
+ #pricing [style*="padding: 24px 24px 24px 0"]{box-shadow:inset 0 -2px 0 transparent;transition:transform .3s,box-shadow .3s}
+ #pricing [style*="padding: 24px 24px 24px 0"]:hover{transform:translateY(-4px);box-shadow:inset 0 -2px 0 var(--evergreen-700)}
+ #services [style*="padding: 24px 0"]{transition:padding-left .3s,background-color .3s}
+ #services [style*="padding: 24px 0"]:hover{padding-left:12px!important;background:var(--surface)}
+
+ /* hover reveal text */
+ [data-tip]{position:relative;cursor:default}
+ [data-tip]::after{content:attr(data-tip);position:absolute;inset:0;display:flex;align-items:flex-end;padding:20px;box-sizing:border-box;background:linear-gradient(to top,rgba(14,38,28,.94) 0%,rgba(14,38,28,.82) 60%,rgba(14,38,28,.55) 100%);color:#FFFFFF;font-family:var(--font-sans);font-size:15px;line-height:22px;font-weight:500;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1);pointer-events:none;z-index:2}
+ [data-tip]:hover::after{opacity:1;transform:none}
+ #pricing [data-tip]::after{padding:16px;font-size:14px;line-height:20px;align-items:center}
+
+ /* reveal on scroll */
+ @supports (animation-timeline: view()){
+  main section:not(#top):not(.ph) h2,main section figure,.card,#services [style*="padding: 24px 0"],#pricing [style*="padding: 24px 24px 24px 0"],#planning li,#current [style*="padding: 20px 0"],#faq [style*="padding: 20px 0"],#quote form{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+  section[aria-label="Photograph"] img{animation:drift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+ }
+}
+@media (max-width: 760px){
+ main{padding-top:101px}
+ [id]{scroll-margin-top:116px}
+ [style*="padding: 80px 48px"],[style*="padding: 88px 48px"],[style*="padding: 96px 48px"],[style*="padding: 72px 48px"],[style*="padding: 64px 48px"]{padding-left:20px!important;padding-right:20px!important;padding-top:56px!important}
+ [style*="padding: 80px 48px;"],[style*="padding: 88px 48px;"],[style*="padding: 64px 48px;"]{padding-bottom:56px!important}
+ [style*="padding: 96px 48px 80px"]{padding-top:32px!important;padding-bottom:40px!important;gap:32px!important}
+ [style*="padding: 72px 48px 56px"]{padding-top:40px!important;padding-bottom:40px!important}
+ [style*="padding: 0 48px 48px"],[style*="padding: 24px 48px"],[style*="padding: 56px 48px"],[style*="padding: 36px 48px"],[style*="padding: 64px 48px"]{padding-left:20px!important;padding-right:20px!important}
+ header>div>div{height:64px!important;gap:10px!important}
+ header a:first-child svg{width:22px;height:25px;flex:none}
+ .nl{display:none!important}
+ .nav-cta{margin-left:0!important;padding:10px 12px!important;font-size:14px!important;white-space:nowrap}
+ .mnav{display:block}
+ .mnav summary{list-style:none;cursor:pointer;width:42px;height:42px;display:flex;align-items:center;justify-content:center;border:1px solid #D9E0DB;border-radius:2px}
+ .mnav summary::-webkit-details-marker{display:none}
+ .mnav[open] summary{background:#E8F0EB}
+ .mnav .menu{position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 101px);overflow-y:auto;background:#F7F6F2;border-bottom:1px solid #D9E0DB;padding:8px 20px 16px;display:flex;flex-direction:column;box-sizing:border-box}
+ .mnav .menu a{padding:14px 0;border-bottom:1px solid #D9E0DB;color:#18221D;text-decoration:none;font-size:17px}
+ .mnav .menu a[aria-current="page"]{color:#1F4D3A;font-weight:600}
+ #top h1,.ph h1{font-size:38px!important;line-height:44px!important}
+ #top [style*="aspect-ratio: 4 / 5"]{aspect-ratio:4/3!important}
+ h2[style*="font-size: 36px"],h2[style*="font-size: 40px"]{font-size:30px!important;line-height:36px!important}
+ #explore h2,#explore h1{font-size:32px!important;line-height:38px!important}
+ [style*="gap: 56px"],[style*="gap: 64px"]{gap:32px!important}
+ form[style*="grid-template-columns: repeat(2"]{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;padding:20px!important;gap:14px 12px!important}
+ form[style*="grid-template-columns: repeat(2"]>*:not(label:has(input[type="number"])){grid-column:1/-1}
+ form[style*="grid-template-columns: repeat(2"]>label:has(input[type="number"]){font-size:13px!important;justify-content:space-between;min-width:0}
+ form input,form select,form textarea{min-width:0;width:100%;box-sizing:border-box}
+ form button[type="submit"]{padding:16px 20px!important}
+ [style*="height: 440px"]{height:220px!important}
+ .shot-wide{display:none!important}
+ .shot-narrow{display:block!important}
+ table[style*="min-width: 460px"]{min-width:0!important}
+ table[style*="min-width: 460px"] td,table[style*="min-width: 460px"] th{padding:10px 8px!important;white-space:normal!important}
+ [style*="font-size: 40px; line-height: 48px"]{font-size:32px!important;line-height:40px!important}
+}
+
+/* Announcement bar */
+.annc-m,.cta-m{display:none}
+.annc a.annc-btn:hover{background:#163A2B!important}
+
+/* Nav: pill hover, mega menus */
+.nl{border-radius:4px}
+.nl:hover,.dd:hover>.nl,.dd:focus-within>.nl{background:#E8F0EB}
+.dd{height:76px;display:flex;align-items:center}
+.mega{position:fixed;left:0;right:0;top:116px;background:#FFFFFF;border-bottom:1px solid var(--line-200);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:2}
+.dd:hover .mega,.dd:focus-within .mega{opacity:1;visibility:visible;transform:none}
+.scrim{position:fixed;left:0;right:0;top:116px;bottom:0;background:rgba(24,34,29,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;pointer-events:none;z-index:1}
+header:has(.dd:hover) .scrim,header:has(.dd:focus-within) .scrim{opacity:1;visibility:visible}
+.mt{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;text-decoration:none;color:var(--ink-900)}
+.mt img{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.mt:hover img{transform:scale(1.05)}
+.mt:hover .mt-l{color:var(--evergreen-700)}
+.ml a{color:var(--ink-900);text-decoration:none}
+.ml a:hover{color:var(--evergreen-700);text-decoration:underline}
+
+/* Card carousel */
+.track{scrollbar-width:none;-ms-overflow-style:none}
+.track::-webkit-scrollbar{display:none}
+.cc img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.cc:hover img{transform:scale(1.04)}
+.cc .plus{transition:transform .25s,background-color .25s}
+.cc:hover .plus{transform:rotate(90deg);background:#E8F0EB}
+.cc button:focus-visible{outline:3px solid #FFFFFF;outline-offset:-6px}
+.arr:hover{background:#E8F0EB!important}
+.arr:disabled{opacity:.35;cursor:default}
+
+/* Detail window */
+.dlg-x:hover{background:#E8F0EB!important}
+
+/* Home redesign */
+#why{background:var(--paper-050)!important;color:var(--ink-900)!important}
+#why>div{padding-top:96px!important;padding-bottom:96px!important}
+#why h2{color:var(--ink-900)!important;font-size:clamp(30px,4vw,46px)!important;line-height:1.12!important;max-width:900px!important;margin-bottom:48px!important}
+#why>div>div{counter-reset:why;gap:20px!important}
+#why>div>div>div{counter-increment:why;background:var(--surface);border:1px solid var(--line-200)!important;border-radius:14px;padding:28px 28px 30px!important;transition:transform .3s,box-shadow .3s,border-color .3s}
+#why>div>div>div::before{content:"0" counter(why);display:block;margin-bottom:18px;font-family:var(--font-serif);font-size:15px;letter-spacing:.14em;color:var(--brass-600)}
+#why>div>div>div:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(20,53,40,.12);border-color:var(--sage-300)!important}
+#why h3{color:var(--ink-900)!important;font-size:24px!important;line-height:30px!important;font-weight:500!important}
+#why div p{color:var(--ink-600)!important}
+#why>div>p{color:var(--brass-600)!important}
+#why a{color:var(--evergreen-700)!important}
+#top .nt a{color:#FFFFFF}
+#serve figure>div{border-radius:14px}
+#serve figure img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+#serve figure:hover img{transform:scale(1.05)}
+#serve h2,#with-report h2,#sample h2{font-size:clamp(30px,4vw,44px)!important;line-height:1.12!important}
+#sample>div>div:first-child>div{border-radius:6px;box-shadow:0 24px 50px rgba(20,53,40,.28);transform:rotate(-3deg);transition:transform .4s}
+#sample>div>div:first-child>div:hover{transform:rotate(0deg)}
+section[aria-label="Next step"]{padding:24px 16px 88px}
+section[aria-label="Next step"]>div{background:var(--evergreen-900);border-radius:22px;padding:72px clamp(24px,5vw,72px)!important;color:#FFFFFF}
+section[aria-label="Next step"] h2{color:#FFFFFF;font-size:clamp(34px,5vw,56px)!important;line-height:1.08!important}
+section[aria-label="Next step"] p{color:var(--mist-100)!important}
+section[aria-label="Next step"] .btn-p,section[aria-label="Next step"] .btn-p:hover{background:#FFFFFF!important;color:var(--evergreen-900)!important}
+section[aria-label="Next step"] .btn-o,section[aria-label="Next step"] .btn-o:hover{background:rgba(255,255,255,.08)!important;color:#FFFFFF!important;border-color:rgba(255,255,255,.6)!important}
+@media (prefers-reduced-motion: no-preference){
+ @keyframes heroIn{from{opacity:0;translate:0 24px}to{opacity:1;translate:0 0}}
+ #top h1,#top video{animation:heroIn .9s cubic-bezier(.2,.7,.2,1) both}
+ #top video{animation-delay:.15s}
+ @supports (animation-timeline: view()){
+  @keyframes rise{from{opacity:0;translate:0 28px}to{opacity:1;translate:0 0}}
+  #why>div>div>div,#serve figure,#with-report>div>div,#sample>div>div,section[aria-label="Next step"]>div{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+ }
+}
+
+/* Floating action bar */
+.fbar a.fb-ask:hover{border-color:var(--evergreen-700)!important}
+.fbar a.fb-go:hover{background:#163A2B!important}
+@media (max-width: 760px){
+ .annc-d,.cta-d{display:none}
+ .annc-m,.cta-m{display:inline}
+ header nav[aria-label="Main"]{display:none!important}
+ header>div>div{padding:0 16px!important}
+ header a:first-child{min-width:0}
+ .brand{white-space:normal!important;font-size:15px!important;line-height:18px!important;max-width:120px}
+ main{padding-top:105px!important}
+ .dd{display:none!important}
+ .mega,.scrim{display:none!important}
+ .fbar{left:12px!important;right:12px!important;transform:none!important;bottom:12px!important}
+ .fbar .fb-hint{display:none}
+ .fbar a{flex:1 1 0;justify-content:center}
+ .cc{width:78vw!important}
+ .track{padding-left:20px!important;padding-right:20px!important;scroll-padding-left:20px!important}
+ .dlg{margin:0!important;height:100vh!important;max-height:none!important;border-radius:0!important}
+ .dlg-b{padding:28px 20px 40px!important}
+ .dlg-b h2{font-size:30px!important;line-height:36px!important}
+}
+
+/* 3D hero */
+.stage{touch-action:pan-y}
+.gl{cursor:grab;outline:none}
+.gl:active{cursor:grabbing}
+.tour3{position:absolute;top:14px;left:50%;transform:translateX(-50%);display:flex;flex-wrap:wrap;justify-content:center;gap:8px;z-index:4;max-width:calc(100% - 560px)}
+.t3{min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--evergreen-700);background:#FFFFFF;color:var(--evergreen-700);font:600 13px/18px var(--font-sans);cursor:pointer}
+.t3.go{background:var(--evergreen-700);color:#FFFFFF}
+.t3:hover{background:#163A2B;color:#FFFFFF}
+.t3:focus-visible{outline:3px solid var(--evergreen-700);outline-offset:2px}
+.stage.big{position:fixed!important;inset:16px;height:auto!important;z-index:300;box-shadow:0 30px 90px rgba(10,14,12,.4)}
+.bigbg{position:fixed;inset:0;z-index:299;border:0;padding:0;margin:0;background:rgba(24,28,26,.55);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);cursor:zoom-out}
+.tools3{position:absolute;top:14px;right:14px;display:flex;gap:8px;z-index:4}
+.icon3{width:44px;height:44px;border:1px solid var(--line-200);border-radius:50%;background:#FFFFFF;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.icon3:hover{border-color:var(--evergreen-700)}
+.icon3:focus-visible,.cl:focus-visible{outline:3px solid var(--evergreen-700);outline-offset:2px}
+.clist{position:absolute;top:72px;right:14px;bottom:72px;width:260px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;z-index:3;padding:2px}
+.cl{min-height:48px;padding:8px 12px;border:1px solid var(--line-200);border-radius:4px;background:rgba(255,255,255,.94);text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:2px;font:600 14px/19px var(--font-sans);color:var(--ink-900)}
+.cl span{font-weight:500;font-size:12px;line-height:16px;color:var(--ink-600)}
+.cl:hover{border-color:var(--evergreen-700)}
+.cl.on{border-color:var(--evergreen-700);background:#E8F0EB;box-shadow:inset 3px 0 0 var(--evergreen-700)}
+.card3{position:absolute;left:14px;bottom:14px;width:min(420px,calc(100% - 330px));z-index:3;background:#FFFFFF;border:1px solid var(--line-200);border-radius:4px;padding:18px 20px;box-shadow:0 12px 32px rgba(20,30,26,.16);box-sizing:border-box}
+.hint3{position:absolute;left:14px;bottom:14px;z-index:3;padding:10px 14px;border-radius:4px;background:rgba(255,255,255,.94);border:1px solid var(--line-200);font-size:14px;line-height:20px;color:var(--ink-900);max-width:calc(100% - 330px)}
+.stage .turns{right:290px!important}
+@media (max-width: 760px){
+ .stage.big{inset:0;border-radius:0!important}
+ .clist{top:62px;left:0;right:0;bottom:auto;width:auto;flex-direction:row;overflow-x:auto;overflow-y:hidden;padding:2px 12px}
+ .cl{flex:none;max-width:220px}
+ .card3{left:12px;right:12px;bottom:12px;width:auto}
+ .hint3{left:12px;right:12px;bottom:12px;max-width:none}
+ .stage .turns{display:none!important}
+ .tour3{top:62px;left:12px;right:12px;transform:none;max-width:none;justify-content:flex-start}
+ .clist{top:112px!important}
+}
+.pin{position:absolute;left:-17px;top:-17px;width:34px;height:34px;padding:0;border:2px solid #FFFFFF;border-radius:50%;background:var(--evergreen-700);color:#FFFFFF;font:600 14px/1 var(--font-sans);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 16px rgba(20,30,26,.3);opacity:0;transition:opacity .4s,background-color .25s;z-index:2}
+.pin::before{content:"";position:absolute;inset:-6px;border-radius:50%}
+.pin:hover,.pin.on{background:#163A2B}
+.pin:focus-visible{outline:3px solid #FFFFFF;outline-offset:2px}
+.hud{z-index:3}
+@keyframes hudp{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion: no-preference){.hud-dot{animation:hudp 1.6s ease-in-out infinite}}
+.ex-btn,.turn{z-index:3}
+.ex-btn[aria-pressed="true"]{background:var(--evergreen-700)!important;color:#FFFFFF!important;border-color:var(--evergreen-700)!important}
+.ex-btn:hover,.turn:hover{border-color:var(--evergreen-700)!important}
+.st3 .n{background:#ECEDEB;color:var(--ink-900)}
+.st3:hover{border-color:var(--evergreen-700)!important}
+.st3.on{border-color:var(--evergreen-700)!important;box-shadow:inset 0 -3px 0 var(--evergreen-700)}
+.st3.on .n{background:var(--evergreen-700);color:#FFFFFF}
+.ex-btn:focus-visible,.turn:focus-visible,.st3:focus-visible,.yr:focus-visible{outline:3px solid var(--evergreen-700);outline-offset:2px}
+.yr{accent-color:#1F4D3A;height:28px}
+
+/* White tile look for the home page */
+div[style*="min-height: 100vh"]{background:#F3F3F1!important}
+#top,#why,section[aria-label="Next step"]>div{background-color:#F3F3F1;background-image:linear-gradient(#E3E4E1 1px,transparent 1px),linear-gradient(90deg,#E3E4E1 1px,transparent 1px)!important;background-size:24px 24px!important}
+#top>div:last-child{background:#FFFFFF!important;border-top:1px solid #DCDDDA;border-bottom:1px solid #DCDDDA}
+#top>div:last-child [style*="color: var(--sage-300)"]{color:var(--ink-600)!important}
+#top>div:last-child [style*="color: #FFFFFF"]{color:var(--ink-900)!important}
+#top>div:last-child [style*="rgba(255, 255, 255, 0.24)"]{border-top-color:#CFD1CE!important}
+#top>div:last-child video{border-color:#DCDDDA!important;box-shadow:0 24px 60px rgba(20,30,26,.14)!important;border-radius:4px!important}
+#top .nt{background:#F3F3F1!important;border-color:#DCDDDA!important;color:var(--ink-600)!important;border-radius:4px!important}
+#top .nt b{color:var(--ink-900)!important}
+#top .nt a{color:var(--evergreen-700)!important}
+#why>div>div>div{border-radius:4px!important}
+#serve figure>div,.cc,#sample>div>div:first-child>div{border-radius:4px!important}
+#sample{background:#ECEDEB!important}
+section[aria-label="Next step"]>div{border:1px solid #DCDDDA;border-radius:4px!important;color:var(--ink-900)!important}
+section[aria-label="Next step"] h2{color:var(--ink-900)!important}
+section[aria-label="Next step"] p{color:var(--ink-600)!important}
+section[aria-label="Next step"] .btn-p,section[aria-label="Next step"] .btn-p:hover{background:var(--evergreen-700)!important;color:#FFFFFF!important}
+section[aria-label="Next step"] .btn-o,section[aria-label="Next step"] .btn-o:hover{background:transparent!important;color:var(--evergreen-700)!important;border-color:var(--evergreen-700)!important}
+footer.ft{background:#1C1F1E!important}
+footer.ft>div:last-child{border-top-color:#2F3432!important}
+@keyframes tilewipe{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+@media (prefers-reduced-motion: no-preference){
+ @supports (animation-timeline: view()){
+  #serve figure>div,#explore .cc{animation:tilewipe linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+ }
+}
+@media (max-width: 900px){
+ .hero3{grid-template-columns:minmax(0,1fr)!important;padding-top:36px!important;padding-bottom:40px!important}
+ .stage{height:600px!important}
+}
+@media (max-width: 480px){
+ .stage{height:560px!important}
+ .st3{font-size:13px!important;padding:8px!important;gap:6px!important}
+ .st3 .n{width:24px!important;height:24px!important}
+ .hud{font-size:12px!important;max-width:calc(100% - 190px)}
+}
+
+/* Viewer v2 */
+.vbar{display:flex;align-items:stretch;gap:0;background:#FFFFFF;border:1px solid #DCDDDA;border-bottom:0;border-radius:8px 8px 0 0;overflow:hidden}
+.msw{display:flex;align-items:center;gap:4px;padding:8px 10px;border-right:1px solid #E6E7E4;min-width:0}
+.mbtn{width:40px;height:40px;border:1px solid #DCDDDA;border-radius:50%;background:#FFFFFF;color:var(--ink-900);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none}
+.mbtn:hover{border-color:var(--evergreen-700);color:var(--evergreen-700)}
+.mlab{display:flex;flex-direction:column;padding:0 8px;min-width:150px}
+.midx{font-size:11px;line-height:14px;letter-spacing:.14em;color:var(--ink-600);font-variant-numeric:tabular-nums}
+.mlab b{font-family:var(--font-serif);font-weight:500;font-size:20px;line-height:24px;color:var(--ink-900)}
+.msub{font-size:12px;line-height:16px;color:var(--ink-600)}
+.steps3{display:flex!important;flex:1 1 auto;gap:0!important}
+.st3{flex:1 1 0;display:flex;align-items:center;justify-content:center;gap:10px;min-height:64px;padding:0 14px;border:0;border-right:1px solid #E6E7E4;background:#FFFFFF;font:600 14px/18px var(--font-sans);color:var(--ink-600);cursor:pointer;box-shadow:none!important}
+.st3 .n{font-size:11px;letter-spacing:.12em;color:#9EA2A0;font-variant-numeric:tabular-nums;background:none!important;width:auto!important;height:auto!important}
+.st3:hover{color:var(--ink-900);background:#F6F7F5}
+.st3.on{color:var(--ink-900);background:#FFFFFF;box-shadow:inset 0 -3px 0 var(--evergreen-700)!important}
+.st3.on .n{color:var(--evergreen-700)!important}
+.fsb{display:flex;align-items:center;gap:8px;padding:0 18px;border:0;background:#FFFFFF;font:600 13px/18px var(--font-sans);color:var(--ink-900);cursor:pointer;flex:none}
+.fsb:hover{background:#F6F7F5;color:var(--evergreen-700)}
+.mbtn:focus-visible,.st3:focus-visible,.fsb:focus-visible,.more3:focus-visible{outline:3px solid var(--evergreen-700);outline-offset:-3px}
+.stage{border:1px solid #DCDDDA;border-radius:0 0 8px 8px}
+.stage.full{position:fixed!important;inset:0;height:auto!important;z-index:2147483000;border-radius:0;border:0}
+.vis:has(.stage.full){animation:none!important}
+.ck:empty{display:none}
+.vhs{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;width:100%}
+.vhs>div{flex:1 1 180px;max-width:240px;background:#FFFFFF;border:1px solid var(--line-200);border-radius:4px;padding:16px 18px;text-align:center}
+.vhs b{display:block;font-family:var(--font-serif);font-weight:500;font-size:30px;line-height:36px;color:var(--evergreen-700)}
+.vhs span{display:block;font-size:14px;line-height:20px;color:var(--ink-600)}
+@media (max-width:480px){.vhs>div{flex:1 1 100%;max-width:none;padding:12px 16px}.vhs b{font-size:26px;line-height:32px}}
+.hud{position:absolute;top:16px;left:16px;z-index:3;display:inline-flex;align-items:center;gap:10px;min-height:36px;padding:0 16px 0 12px;border-radius:999px;background:rgba(18,24,21,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);color:#FFFFFF;font-size:13px;line-height:18px;font-weight:600;letter-spacing:.01em;pointer-events:none}
+.hud-dot{width:8px;height:8px;border-radius:50%;background:#45E2B4;box-shadow:0 0 0 4px rgba(69,226,180,.18)}
+.ex-btn{min-height:40px;padding:0 16px;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.7);border-radius:999px;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font:600 13px/18px var(--font-sans);color:var(--ink-900);cursor:pointer}
+.icon3{background:rgba(255,255,255,.92)!important;color:var(--ink-900)}
+.tour3{top:auto!important;bottom:18px;left:50%;transform:translateX(-50%);max-width:calc(100% - 700px)!important;padding:6px;border-radius:999px;background:rgba(18,24,21,.72);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);gap:6px!important;flex-wrap:wrap}
+.t3{min-height:36px!important;padding:0 14px!important;border:0!important;background:transparent!important;color:#E9EEEB!important;font:600 13px/18px var(--font-sans)!important;border-radius:999px!important}
+.t3.go{background:#FFFFFF!important;color:var(--ink-900)!important}
+.t3:hover{background:rgba(255,255,255,.18)!important;color:#FFFFFF!important}
+.t3.go:hover{background:#E8F0EB!important;color:var(--ink-900)!important}
+.clist{top:16px!important;right:16px!important;bottom:16px!important;width:300px!important;padding:0!important;gap:0!important;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid rgba(220,221,218,.9);border-radius:8px;box-shadow:0 18px 40px rgba(20,30,26,.14);display:flex!important;flex-direction:column!important;overflow:hidden!important}
+.clh{padding:14px 16px 10px;border-bottom:1px solid #E6E7E4;display:flex;flex-direction:column;gap:2px}
+.clh b{font-family:var(--font-serif);font-weight:500;font-size:18px;line-height:22px;color:var(--ink-900)}
+.clh span{font-size:12px;line-height:16px;color:var(--ink-600)}
+.cls{flex:1 1 auto;overflow-y:auto;padding:6px;display:flex;flex-direction:column;gap:2px}
+.cl{border:0!important;border-radius:6px!important;background:transparent!important;min-height:46px!important;padding:8px 10px!important;font:600 13px/18px var(--font-sans)!important}
+.cl span{font-variant-numeric:tabular-nums}
+.cl:hover{background:#F2F4F1!important}
+.cl.on{background:#E8F0EB!important;box-shadow:inset 3px 0 0 var(--evergreen-700)!important}
+.tools3{top:16px!important;right:332px!important}
+.turns{position:absolute;bottom:18px;right:332px!important;display:flex;gap:8px;z-index:3}
+.turn{width:42px;height:42px;border:1px solid rgba(255,255,255,.7)!important;border-radius:50%;background:rgba(255,255,255,.9)!important;color:var(--ink-900);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.card3,.hint3,.sp3{left:16px!important;bottom:16px!important;border-radius:8px!important;border:1px solid rgba(220,221,218,.9)!important;background:rgba(255,255,255,.96)!important;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 18px 40px rgba(20,30,26,.16)!important}
+.card3{width:min(460px,calc(100% - 360px))!important;padding:18px 20px!important}
+.hint3{max-width:min(460px,calc(100% - 360px))!important}
+.sp3{position:absolute;z-index:3;width:min(420px,calc(100% - 360px));padding:16px 18px;display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:21px;color:var(--ink-900);box-sizing:border-box}
+.sp3 b{font-family:var(--font-serif);font-weight:500;font-size:20px;line-height:24px}
+.sp3 p{margin:0;color:var(--ink-600)}
+.lg3{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px}
+.lg3 li{display:flex;align-items:center;gap:8px}
+.lg3 i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.yrl{display:flex;align-items:center;gap:14px}
+.yrl span{font-family:var(--font-serif);font-size:30px;line-height:34px;min-width:70px;font-variant-numeric:tabular-nums}
+.yrl input{flex:1 1 auto;min-width:0}
+.ck{margin:0 0 4px;font-size:11px;line-height:16px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--evergreen-700)}
+.cn{margin:0 0 14px;font-family:var(--font-serif);font-size:24px;line-height:30px;font-weight:500;color:var(--ink-900)}
+.cg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cf{border-top:1px solid #DCDDDA;padding-top:8px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.cf.on{border-top:2px solid var(--evergreen-700)}
+.cf span{font-size:11px;line-height:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-600)}
+.cf b{font-size:20px;line-height:26px;font-weight:600;color:var(--ink-900);font-variant-numeric:tabular-nums}
+.cf i{font-style:normal;font-size:12px;line-height:16px;color:var(--ink-600)}
+.cfoot{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:14px;font-size:12px;line-height:17px;color:var(--ink-600)}
+.more3{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 14px;border:1px solid var(--evergreen-700);border-radius:999px;background:var(--evergreen-700);color:#FFFFFF;font:600 13px/18px var(--font-sans);cursor:pointer}
+.more3:hover{background:#163A2B}
+.info3{position:absolute;z-index:5;top:16px;left:16px;bottom:16px;width:min(560px,calc(100% - 360px));overflow-y:auto;padding:24px 26px 28px;background:rgba(255,255,255,.98);border:1px solid rgba(220,221,218,.9);border-radius:8px;box-shadow:0 24px 60px rgba(20,30,26,.22);box-sizing:border-box}
+.ix{position:sticky;top:0;float:right;width:40px;height:40px;border:1px solid #DCDDDA;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.iallow{margin:-8px 0 14px;font-size:12px;line-height:16px;color:var(--ink-600)}
+.ig{grid-template-columns:repeat(5,minmax(0,1fr))}
+.ig b{font-size:16px;line-height:22px}
+.irows{margin:20px 0 0;display:flex;flex-direction:column;gap:0}
+.irows div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:12px 0;border-top:1px solid #E6E7E4}
+.irows dt{font-size:12px;line-height:18px;font-weight:600;letter-spacing:.04em;color:var(--ink-900)}
+.irows dd{margin:0;font-size:14px;line-height:22px;color:var(--ink-600)}
+.inote{margin:16px 0 0;font-size:12px;line-height:17px;color:var(--ink-600)}
+@media (max-width: 900px){
+ .vbar{flex-wrap:wrap}
+ .msw{flex:1 1 100%;border-right:0;border-bottom:1px solid #E6E7E4;justify-content:space-between}
+ .steps3{flex:1 1 auto}
+ .st3{min-height:52px;font-size:13px;padding:0 8px;gap:6px}
+ .fsb{padding:0 12px}
+ .fsb span{display:none}
+ .stage{height:640px!important}
+ .clist{top:auto!important;left:12px!important;right:12px!important;bottom:12px!important;width:auto!important;height:164px}
+ .cls{flex-direction:row!important;overflow-x:auto;overflow-y:hidden}
+ .cl{flex:none;width:200px}
+ .card3,.hint3,.sp3{left:12px!important;right:12px!important;width:auto!important;max-width:none!important;bottom:188px!important}
+ .tour3{top:62px!important;bottom:auto;left:12px;right:12px;transform:none;max-width:none!important;border-radius:12px;justify-content:flex-start}
+ .tools3{right:12px!important;top:12px!important}
+ .turns{display:none!important}
+ .info3{left:0;right:0;top:0;bottom:0;width:auto;border-radius:0}
+ .ig{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .irows div{grid-template-columns:minmax(0,1fr);gap:4px}
+ .hud{top:12px;left:12px;max-width:calc(100% - 190px);font-size:12px}
+}
+@media (max-width: 480px){
+ .stage{height:600px!important}
+ .mlab{min-width:0}
+ .st3 .n{display:none}
+ .cg{gap:8px}
+ .cf b{font-size:16px;line-height:22px}
+ .cfoot{flex-direction:column;align-items:flex-start}
+}
+</style>
+<script src="assets/dc-lite.js"></script>
+</head>
+<body>
+<div id="dc-root"><div style="font-family: var(--font-sans); color: var(--ink-900); background: var(--paper-050); min-height: 100vh; font-size: 16px; line-height: 26px">
+
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--paper-050)">
+<div class="annc" style="height: 40px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 14px; background: var(--mist-100); font-size: 14px; line-height: 18px; color: var(--ink-900)">
+<span class="annc-d">Send a no-obligation quote request by March 1, 2027 and secure 10% off</span><span class="annc-m">10% off by March 1, 2027</span>
+<a class="annc-btn" href="quote.html" style="flex: none; padding: 5px 12px; font-size: 13px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 3px">Get a quote</a>
+</div>
+<div style="border-bottom: 1px solid var(--line-200); background: var(--paper-050); position: relative; z-index: 3">
+<div style="max-width: 1240px; height: 76px; box-sizing: border-box; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html" style="flex: 1 1 0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink-900)">
+<svg width="26" height="29" viewBox="0 0 40 44" aria-hidden="true"><path fill="#1F4D3A" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#1F4D3A" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg>
+<span class="brand" style="font-size: 17px; font-weight: 600; letter-spacing: 0.01em; white-space: nowrap">Ashgrove Strata Advisors</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 2px">
+<div class="dd"><a class="nl" href="services.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Services<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" style="margin-left: 6px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a><div class="mega"><div style="max-width: 1160px; margin: 0 auto; padding: 36px 48px 44px; display: flex; justify-content: center; gap: 48px"><div style="display: flex; gap: 24px"><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7314f01aa58671c3a3eafa919328f1ff" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Depreciation reports</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Insurance appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/49484681170f915203054e55aed9a1f0" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Commercial appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Residential appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a></div><div style="width: 1px; background: var(--line-200)"></div><ul class="ml" style="margin: 0; padding: 8px 0 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 20px; font-weight: 500; min-width: 200px"><li><a href="services.html">Planning sessions</a></li><li><a href="services.html">Keep your report current</a></li><li><a href="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/c2d577650072c2f30d2015f6df02c8b4">Sample report (PDF)</a></li><li><a href="pricing.html">Pricing and process</a></li><li><a href="quote.html">Request a proposal</a></li></ul></div></div></div><a class="nl" href="pricing.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Pricing</a><div class="dd"><a class="nl" href="areas.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Areas<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" style="margin-left: 6px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a><div class="mega"><div style="max-width: 1160px; margin: 0 auto; padding: 36px 48px 44px; display: flex; justify-content: center; gap: 48px"><div style="display: flex; gap: 40px"><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Vancouver, Burnaby and nearby</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="vancouver.html">Vancouver</a></li><li><a href="burnaby.html">Burnaby</a></li><li><a href="new-westminster.html">New Westminster</a></li><li><a href="richmond.html">Richmond</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">North Shore</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="north-vancouver.html">North Vancouver</a></li><li><a href="west-vancouver.html">West Vancouver</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Tri-Cities and Ridge Meadows</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="coquitlam.html">Coquitlam</a></li><li><a href="maple-ridge.html">Maple Ridge</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">South of the Fraser</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="surrey.html">Surrey</a></li><li><a href="delta.html">Delta</a></li><li><a href="white-rock.html">White Rock</a></li><li><a href="langley.html">Langley</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Fraser Valley</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="abbotsford.html">Abbotsford</a></li></ul></div></div><div style="width: 1px; background: var(--line-200)"></div><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 20px; font-weight: 500; min-width: 180px"><li><a href="areas.html">All service areas</a></li><li><a href="areas.html">Deadlines by region</a></li><li><a href="quote.html">Request a proposal</a></li></ul></div></div></div><a class="nl" href="about.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">About</a><a class="nl" href="faq.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">FAQ</a><a class="nl" href="blog.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Blog</a>
+</nav>
+<div style="flex: 1 1 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px">
+<a class="nav-cta" href="quote.html" style="padding: 10px 18px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 4px; white-space: nowrap"><span class="cta-d">Request a proposal</span><span class="cta-m">Get a proposal</span></a>
+<details class="mnav"><summary aria-label="Open menu"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20" stroke="#18221D" stroke-width="1.6"></path></svg></summary><div class="menu"><a href="index.html" aria-current="page">Home</a><a href="services.html">Services and planning sessions</a><a href="pricing.html">Pricing and process</a><a href="areas.html">Service areas</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ and contact</a><a href="quote.html">Request a proposal</a></div></details>
+</div>
+</div>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="top" style="background: var(--paper-050)">
+<div class="hero3" style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 64px clamp(16px, 4vw, 48px) 64px; display: flex; flex-direction: column; gap: 40px">
+<div style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Inspected in person · Analysed with AI · Metro Vancouver and Fraser Valley</span>
+<h1 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: clamp(40px, 5.2vw, 66px); line-height: 1.05; letter-spacing: -0.01em; color: var(--ink-900)">Depreciation reports for BC strata corporations</h1>
+<div style="width: 56px; height: 3px; background: var(--evergreen-700)"></div>
+<p style="margin: 0; font-size: 18px; line-height: 28px; color: var(--ink-600); max-width: 540px">An in-person inspection by a designated appraiser, AI-assisted analysis, and a report every volunteer council member can follow. Prepared under CUSPAP 2026 and the <i>Strata Property Act</i>. Fixed fees from $2,000.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 8px">
+<a class="btn-p" href="quote.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Request a proposal</a>
+<a class="btn-o" href="#sample" style="padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">View a sample report</a>
+</div>
+</div>
+<div class="vhead" style="max-width: 860px; margin: 40px auto 24px; padding: 0 4px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">What your strata corporation maintains</span>
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: clamp(30px, 3.6vw, 42px); line-height: 1.12; color: var(--ink-900)">The components your strata corporation is responsible for</h2>
+<p style="margin: 0; font-size: 17px; line-height: 27px; color: var(--ink-600); max-width: 620px">Explore a typical townhouse complex and a typical low-rise apartment building below. Select any part to see its remaining life, today's cost and the future cost. Then book an inspection with us to see where your building stands.</p>
+<div class="vhs"><div><b>25 to 45</b><span>components in a typical townhouse complex</span></div><div><b>40 to 65</b><span>components in a typical low-rise apartment</span></div><div><b>60 to 80</b><span>components in a typical high-rise</span></div></div>
+<a class="btn-p" href="quote.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Book an inspection</a>
+</div>
+<div class="vis" style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+<div class="vbar">
+<div class="msw"><button class="mbtn" type="button" aria-label="Previous model" data-dc-h="0"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></button><div class="mlab"><span class="midx">01 / 02</span><b>Low-rise apartment</b><span class="msub">Typical building · 0 components</span></div><button class="mbtn" type="button" aria-label="Next model" data-dc-h="1"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></button></div>
+<div class="steps3" role="group" aria-label="View"><button class="st3 on" type="button" aria-pressed="true" data-dc-h="2"><span class="n">01</span><span>Inspect</span></button><button class="st3" type="button" aria-pressed="false" data-dc-h="3"><span class="n">02</span><span>Analyse with AI</span></button><button class="st3" type="button" aria-pressed="false" data-dc-h="4"><span class="n">03</span><span>Forecast</span></button></div>
+<button class="fsb" type="button" data-dc-h="5"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg><span>Full screen</span></button>
+</div>
+<div class="stage" data-dc-r="0" style="position: relative; height: 720px; overflow: hidden; background: #C9D6E2">
+
+<div class="gl-wait" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; line-height: 18px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-600)">Building the model</div>
+<canvas class="gl" data-dc-r="1" aria-label="Interactive 3D model of a strata building. Drag to turn it." style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+<div class="hud"><span class="hud-dot" aria-hidden="true"></span>Live 3D model · select any part</div>
+<div class="tools3">
+<button class="ex-btn" type="button" aria-pressed="false" data-dc-h="6"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5.5h10M3 8h10M3 10.5h10M8 1.5v2M8 12.5v2" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>Exploded view</button>
+
+</div>
+<div class="tour3" role="group" aria-label="Walk through"><button class="t3 go" type="button" data-dc-h="7">Walk in · Lobby</button><button class="t3 go" type="button" data-dc-h="8">Drive in · Parkade</button><button class="t3 go" type="button" data-dc-h="9">Patio and pool</button></div>
+<div class="clist" role="group" aria-label="Components"><div class="clh"><b>0 components</b><span>Typical low-rise apartment building</span></div><div class="cls"></div></div>
+<div class="hint3">Select any part of the building, or a component from the list. Select the front entrance to walk in, or the parkade gate to drive in.</div>
+
+
+
+
+<div class="turns">
+<button class="turn" type="button" aria-label="Turn building left" data-dc-h="10"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M7 4L3 8l4 4M3.5 8H11a4 4 0 0 1 0 8H9" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></button>
+<button class="turn" type="button" aria-label="Turn building right" data-dc-h="11"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 4l4 4-4 4M14.5 8H7a4 4 0 0 0 0 8h2" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></button>
+</div>
+</div>
+</div>
+</div>
+<div style="background: var(--evergreen-900)">
+<div style="max-width: 1160px; box-sizing: border-box; margin: 0 auto; padding: 56px clamp(16px, 4vw, 48px) 68px; display: flex; flex-direction: column; align-items: center; gap: 26px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Watch · Ashgrove in 30 seconds</span>
+<video controls="" autoplay="" muted="" loop="" playsinline="" preload="metadata" poster="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/1dd5973ce60644e873fd5d9f616f1285" aria-label="Ashgrove Strata Advisors: depreciation reports and appraisals for BC strata corporations" style="width: 100%; max-width: 1040px; height: auto; aspect-ratio: 16 / 9; display: block; background: #0B1F17; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 32px 80px rgba(0, 0, 0, 0.38)"><source src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/af3dbcd4c211b5df4e4e027d2019e4a2" type="video/mp4"></video>
+<div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px 32px; padding: 20px 0 4px">
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.24); padding-top: 16px"><div style="font-family: var(--font-serif); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; color: #FFFFFF">$2,000</div><div style="margin-top: 8px; font-size: 14px; line-height: 21px; color: var(--sage-300)">Fixed fees from, agreed before we start</div></div>
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.24); padding-top: 16px"><div style="font-family: var(--font-serif); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; color: #FFFFFF">3 weeks</div><div style="margin-top: 8px; font-size: 14px; line-height: 21px; color: var(--sage-300)">Usual wait for your site inspection</div></div>
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.24); padding-top: 16px"><div style="font-family: var(--font-serif); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; color: #FFFFFF">30 years</div><div style="margin-top: 8px; font-size: 14px; line-height: 21px; color: var(--sage-300)">Of repair and replacement costs forecast</div></div>
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.24); padding-top: 16px"><div style="font-family: var(--font-serif); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; color: #FFFFFF">AACI</div><div style="margin-top: 8px; font-size: 14px; line-height: 21px; color: var(--sage-300)">And MRICS designated appraiser signs every report, backed by liability insurance</div></div>
+</div>
+<div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+<div class="nt" style="border: 1px solid rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.06); border-radius: 10px; padding: 18px 22px; font-size: 15px; line-height: 23px; color: var(--mist-100)"><b style="color: #FFFFFF">Secure 10% off.</b> Send a no-obligation quote request by March 1, 2027. <a href="pricing.html">See the offer</a></div>
+<div class="nt" style="border: 1px solid rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.06); border-radius: 10px; padding: 18px 22px; font-size: 15px; line-height: 23px; color: var(--mist-100)"><b style="color: #FFFFFF">Is your strata behind?</b> If your last report is dated before December 31, 2020, the deadline in Metro Vancouver and the Fraser Valley was July 1, 2026. <a href="quote.html">Request a proposal</a>; we can usually inspect within three weeks.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="why" aria-label="What stands behind your report" style="background: var(--evergreen-900); color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 64px 48px">
+<p style="margin: 0 0 10px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Behind every report</p>
+<h2 style="margin: 0 0 40px; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px; color: #FFFFFF; max-width: 760px">Reliable costing, professional inspection, AI-assisted analysis and a designated, insured professional</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px 40px">
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Reliable costing</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">Cost estimates draw on our database of comparable strata buildings, hands-on experience and recognized contractor cost sources, so your forecast reflects what work really costs.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Professional inspection</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">The appraiser who signs your report inspects every component in person and records its condition with photographs.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">AI-assisted analysis</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">AI organizes your records and speeds up analysis, so you get your report sooner: inspection usually within three weeks, draft about four weeks later. Every figure is checked by the appraiser.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Designated and insured</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">Signed by an AACI and MRICS designated member, backed by professional liability insurance. An AACI is a qualified person under <a href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_06#section94" target="_blank" rel="noopener" style="color: #FFFFFF">section 94 of the <i>Strata Property Act</i></a> and <a href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/12_43_2000#section6.2" target="_blank" rel="noopener" style="color: #FFFFFF">section 6.2 of the Strata Property Regulation</a>.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Easy to read</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">Plain words, clear charts and guided notes that walk council through each section. No more wrestling with equations or formulas.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Competitive fixed fees</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">Townhouse from $2,000, low-rise from $3,000, high-rise from $5,000, agreed before we start.</p><a href="pricing.html" style="display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 600; color: #FFFFFF">See pricing</a></div>
+</div>
+</div>
+</section>
+
+<section id="serve" style="max-width: 1160px; margin: 0 auto; padding: 80px 48px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Who we serve</span>
+<h2 style="margin: 16px 0 12px; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px">Every type of strata building</h2>
+<p style="margin: 0 0 40px; color: var(--ink-600); max-width: 640px">Most of our clients are self-managed councils: volunteers who need a report they can understand, present to owners and act on.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+<div data-tip="We inspect roofs, siding, decks, paving and fencing on site, then forecast each one over 30 years." style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="Three-storey townhouses with garages" style="width: 100%; height: 100%; object-fit: cover; object-position: 55% 50%; display: block"></div>
+<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; line-height: 28px; font-weight: 600">Townhouses</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-600)">Roofs, siding, decks, garage doors, paving and fencing, the components that drive townhouse budgets.</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+<div data-tip="Envelope, roofing, parkade membrane, elevators and mechanical, each with its own cost and remaining life." style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/5ff131497777dcb674c0a65f8da2c913" alt="Four-storey wood-frame apartment buildings among trees" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block"></div>
+<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; line-height: 28px; font-weight: 600">Low-rise apartments</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-600)">Wood-frame buildings up to six storeys: envelope, roofing, parkade membranes, elevators and mechanical systems.</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+<div data-tip="Curtain wall, multiple elevators, life safety and building systems, planned across 30 years." style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="High-rise residential towers in Burnaby with mountains behind" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block"></div>
+<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; line-height: 28px; font-weight: 600">High-rise towers</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-600)">Concrete towers with curtain wall, multiple elevators, life safety and building systems over a 30-year plan.</span></figcaption>
+</figure>
+</div>
+<p style="margin: 40px 0 0; padding-top: 20px; border-top: 1px solid var(--line-200); color: var(--ink-600)"><b style="color: var(--ink-900)">Also:</b> commercial strata, industrial strata and stratas with sections, such as residential and commercial sections with separate funds.</p>
+</section>
+
+<section id="explore" style="padding: 88px 0 72px; overflow: hidden">
+<div style="max-width: 760px; margin: 0 auto 40px; padding: 0 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Services</span>
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 44px; line-height: 50px; letter-spacing: -0.01em">What we do</h2>
+<p style="margin: 0; font-size: 18px; line-height: 28px; color: var(--ink-600)">Every assignment is prepared and signed by a designated appraiser who inspects the property in person. Select a card to learn more.</p>
+</div>
+<div class="track" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 0 max(32px, calc((100% - 1096px) / 2)); scroll-padding-left: max(32px, calc((100% - 1096px) / 2))">
+<div class="cc" style="flex: none; width: 340px; aspect-ratio: 4 / 5; position: relative; border-radius: 12px; overflow: hidden; background: var(--mist-100); scroll-snap-align: start">
+<img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7314f01aa58671c3a3eafa919328f1ff" alt="Asphalt shingle roof gables against a blue sky" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,38,28,.78) 0%, rgba(14,38,28,0) 50%)"></div>
+<h3 style="position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; color: #FFFFFF; font-family: var(--font-serif); font-size: 28px; line-height: 34px; font-weight: 500">Depreciation reports</h3>
+<button type="button" aria-label="More about Depreciation reports" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer" data-dc-h="12"><span class="plus" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="#18221D" stroke-width="1.8"></path></svg></span></button>
+</div><div class="cc" style="flex: none; width: 340px; aspect-ratio: 4 / 5; position: relative; border-radius: 12px; overflow: hidden; background: var(--mist-100); scroll-snap-align: start">
+<img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="High-rise residential towers with mountains behind" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,38,28,.78) 0%, rgba(14,38,28,0) 50%)"></div>
+<h3 style="position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; color: #FFFFFF; font-family: var(--font-serif); font-size: 28px; line-height: 34px; font-weight: 500">Insurance appraisals</h3>
+<button type="button" aria-label="More about Insurance appraisals" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer" data-dc-h="13"><span class="plus" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="#18221D" stroke-width="1.8"></path></svg></span></button>
+</div><div class="cc" style="flex: none; width: 340px; aspect-ratio: 4 / 5; position: relative; border-radius: 12px; overflow: hidden; background: var(--mist-100); scroll-snap-align: start">
+<img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/49484681170f915203054e55aed9a1f0" alt="Aerial view of a Lower Mainland residential neighbourhood" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,38,28,.78) 0%, rgba(14,38,28,0) 50%)"></div>
+<h3 style="position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; color: #FFFFFF; font-family: var(--font-serif); font-size: 28px; line-height: 34px; font-weight: 500">Commercial appraisals</h3>
+<button type="button" aria-label="More about Commercial appraisals" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer" data-dc-h="14"><span class="plus" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="#18221D" stroke-width="1.8"></path></svg></span></button>
+</div><div class="cc" style="flex: none; width: 340px; aspect-ratio: 4 / 5; position: relative; border-radius: 12px; overflow: hidden; background: var(--mist-100); scroll-snap-align: start">
+<img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="Three-storey townhouses with garages" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,38,28,.78) 0%, rgba(14,38,28,0) 50%)"></div>
+<h3 style="position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; color: #FFFFFF; font-family: var(--font-serif); font-size: 28px; line-height: 34px; font-weight: 500">Residential appraisals</h3>
+<button type="button" aria-label="More about Residential appraisals" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer" data-dc-h="15"><span class="plus" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="#18221D" stroke-width="1.8"></path></svg></span></button>
+</div>
+</div>
+<div style="max-width: 1096px; margin: 24px auto 0; padding: 0 32px; display: flex; justify-content: flex-end; gap: 8px">
+<button class="arr" type="button" aria-label="Previous cards" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-200); background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer" data-dc-h="16"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="#18221D" stroke-width="1.8"></path></svg></button>
+<button class="arr" type="button" aria-label="Next cards" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-200); background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer" data-dc-h="17"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="#18221D" stroke-width="1.8"></path></svg></button>
+</div>
+</section>
+<section id="with-report" style="background: var(--surface); border-top: 1px solid var(--line-200)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 72px 48px; display: flex; flex-wrap: wrap; gap: 32px 56px">
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">With your depreciation report</span>
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px">Support that continues after delivery</h2>
+</div>
+<div style="flex: 2 1 480px; min-width: 0">
+<div style="border-top: 1px solid var(--line-200); padding: 20px 0; display: flex; flex-wrap: wrap; gap: 6px 24px; align-items: baseline"><span style="flex: 0 0 90px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Included</span><div style="flex: 1 1 300px"><h3 style="margin: 0 0 4px; font-size: 18px; line-height: 26px; font-weight: 600">Keep your report current</h3><p style="margin: 0; color: var(--ink-600)">A free yearly check-in keeps your strata's file up to date, so a new council starts from current information. <a href="services.html">How it works</a></p></div></div>
+<div style="border-top: 1px solid var(--line-200); border-bottom: 1px solid var(--line-200); padding: 20px 0; display: flex; flex-wrap: wrap; gap: 6px 24px; align-items: baseline"><span style="flex: 0 0 90px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass-600)">Optional</span><div style="flex: 1 1 300px"><h3 style="margin: 0 0 4px; font-size: 18px; line-height: 26px; font-weight: 600">Funding planning sessions</h3><p style="margin: 0; color: var(--ink-600)">Test contribution and project options with us online before each AGM, from $300 per session. <a href="services.html">How it works</a></p></div></div>
+</div>
+</div>
+</section>
+
+<section id="sample" style="background: var(--mist-100)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 64px 48px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center">
+<div style="flex: 0 1 260px; min-width: 0"><div style="aspect-ratio: 8.5 / 11; width: 100%; max-width: 260px; background: var(--evergreen-700); color: #FFFFFF; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--line-200); box-sizing: border-box">
+<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600"><svg width="14" height="15" viewBox="0 0 40 44" aria-hidden="true"><path fill="#FFFFFF" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#FFFFFF" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg>Ashgrove Strata Advisors</div>
+<div><div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-300)">Depreciation report</div><div style="font-family: var(--font-serif); font-size: 30px; line-height: 34px; margin-top: 8px">Maple Grove Townhomes</div><div style="font-size: 12px; color: var(--mist-100); margin-top: 8px">Sample report · fictional property</div></div>
+</div></div>
+<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Sample report</span>
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px">See what your council receives</h2>
+<p style="margin: 0; color: var(--ink-600)">A sample depreciation report for a fictional 24-lot townhouse: a one-page summary in plain words, a building-at-a-glance page for owners and buyers, a page for every component, the strata plan and site map, the reserve fund history, three 30-year funding models (minimum, fair share and full funding) and the 30-year expenditure tables.</p>
+<a class="btn-o" href="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/c2d577650072c2f30d2015f6df02c8b4" download="Ashgrove-Sample-Depreciation-Report.pdf" target="_blank" rel="noopener" style="align-self: flex-start; padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">Download sample report (PDF)</a>
+</div>
+</div>
+</section>
+
+<section aria-label="Next step">
+<div style="max-width: 1160px; margin: 0 auto; padding: 72px 48px; display: flex; flex-wrap: wrap; gap: 24px 56px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px">Fixed fees from $2,000</h2>
+<p style="margin: 0; color: var(--ink-600); max-width: 560px">Townhouse from $2,000, low-rise from $3,000, high-rise from $5,000, before GST. Commercial, industrial and sectioned stratas quoted individually. Your proposal confirms the fee before we start.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn-p" href="quote.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Request a proposal</a>
+<a class="btn-o" href="pricing.html" style="padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">See pricing</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="ft" style="background: var(--evergreen-900); color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 64px 48px; display: flex; flex-wrap: wrap; gap: 40px 56px">
+<div style="flex: 2 1 300px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px"><svg width="26" height="29" viewBox="0 0 40 44" aria-hidden="true"><path fill="#FFFFFF" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#FFFFFF" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg><span style="font-size: 17px; font-weight: 600">Ashgrove Strata Advisors</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: var(--mist-100); max-width: 340px">Depreciation reports, insurance appraisals and property appraisals in Metro Vancouver and the Fraser Valley, by an Accredited Appraiser (AACI, MRICS).</p>
+<p style="margin: 0; font-size: 15px; line-height: 26px; color: var(--mist-100)">[Phone]<br>[Email]</p>
+<a class="btn-w" href="quote.html" style="align-self: flex-start; margin-top: 4px; padding: 12px 22px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 2px">Request a proposal</a>
+</div>
+<nav aria-label="Footer" style="flex: 1 1 150px">
+<p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Pages</p>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 24px"><li style="padding: 3px 0"><a href="index.html">Home</a></li><li style="padding: 3px 0"><a href="services.html">Services</a></li><li style="padding: 3px 0"><a href="pricing.html">Pricing</a></li><li style="padding: 3px 0"><a href="areas.html">Service areas</a></li><li style="padding: 3px 0"><a href="about.html">About</a></li><li style="padding: 3px 0"><a href="faq.html">FAQ</a></li><li style="padding: 3px 0"><a href="blog.html">Blog</a></li><li style="padding: 3px 0"><a href="quote.html">Request a proposal</a></li></ul>
+</nav>
+<nav aria-label="Service areas" style="flex: 2 1 300px">
+<p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Service areas</p>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 24px; columns: 2; column-gap: 24px"><li style="padding: 3px 0"><a href="abbotsford.html">Abbotsford</a></li><li style="padding: 3px 0"><a href="burnaby.html">Burnaby</a></li><li style="padding: 3px 0"><a href="coquitlam.html">Coquitlam</a></li><li style="padding: 3px 0"><a href="delta.html">Delta</a></li><li style="padding: 3px 0"><a href="langley.html">Langley</a></li><li style="padding: 3px 0"><a href="maple-ridge.html">Maple Ridge</a></li><li style="padding: 3px 0"><a href="new-westminster.html">New Westminster</a></li><li style="padding: 3px 0"><a href="north-vancouver.html">North Vancouver</a></li><li style="padding: 3px 0"><a href="richmond.html">Richmond</a></li><li style="padding: 3px 0"><a href="surrey.html">Surrey</a></li><li style="padding: 3px 0"><a href="vancouver.html">Vancouver</a></li><li style="padding: 3px 0"><a href="west-vancouver.html">West Vancouver</a></li><li style="padding: 3px 0"><a href="white-rock.html">White Rock</a></li></ul>
+</nav>
+</div>
+<div style="border-top: 1px solid var(--evergreen-700)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 24px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; line-height: 20px; color: var(--sage-300)">
+<span>© 2026 Ashgrove Strata Advisors · Metro Vancouver, BC</span>
+<span>Depreciation reports · Insurance appraisals · Commercial appraisals · Residential appraisals</span>
+</div>
+</div>
+</footer>
+
+
+</div></div>
+<template id="dc-tpl"><div style="font-family: var(--font-sans); color: var(--ink-900); background: var(--paper-050); min-height: 100vh; font-size: 16px; line-height: 26px">
+
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--paper-050)">
+<div class="annc" style="height: 40px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 14px; background: var(--mist-100); font-size: 14px; line-height: 18px; color: var(--ink-900)">
+<span class="annc-d">Send a no-obligation quote request by March 1, 2027 and secure 10% off</span><span class="annc-m">10% off by March 1, 2027</span>
+<a class="annc-btn" href="quote.html" style="flex: none; padding: 5px 12px; font-size: 13px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 3px">Get a quote</a>
+</div>
+<div style="border-bottom: 1px solid var(--line-200); background: var(--paper-050); position: relative; z-index: 3">
+<div style="max-width: 1240px; height: 76px; box-sizing: border-box; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html" style="flex: 1 1 0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink-900)">
+<svg width="26" height="29" viewBox="0 0 40 44" aria-hidden="true"><path fill="#1F4D3A" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#1F4D3A" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg>
+<span class="brand" style="font-size: 17px; font-weight: 600; letter-spacing: 0.01em; white-space: nowrap">Ashgrove Strata Advisors</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 2px">
+<div class="dd"><a class="nl" href="services.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Services<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" style="margin-left: 6px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a><div class="mega"><div style="max-width: 1160px; margin: 0 auto; padding: 36px 48px 44px; display: flex; justify-content: center; gap: 48px"><div style="display: flex; gap: 24px"><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7314f01aa58671c3a3eafa919328f1ff" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Depreciation reports</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Insurance appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/49484681170f915203054e55aed9a1f0" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Commercial appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Residential appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a></div><div style="width: 1px; background: var(--line-200)"></div><ul class="ml" style="margin: 0; padding: 8px 0 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 20px; font-weight: 500; min-width: 200px"><li><a href="services.html">Planning sessions</a></li><li><a href="services.html">Keep your report current</a></li><li><a href="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/c2d577650072c2f30d2015f6df02c8b4">Sample report (PDF)</a></li><li><a href="pricing.html">Pricing and process</a></li><li><a href="quote.html">Request a proposal</a></li></ul></div></div></div><a class="nl" href="pricing.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Pricing</a><div class="dd"><a class="nl" href="areas.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Areas<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" style="margin-left: 6px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a><div class="mega"><div style="max-width: 1160px; margin: 0 auto; padding: 36px 48px 44px; display: flex; justify-content: center; gap: 48px"><div style="display: flex; gap: 40px"><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Vancouver, Burnaby and nearby</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="vancouver.html">Vancouver</a></li><li><a href="burnaby.html">Burnaby</a></li><li><a href="new-westminster.html">New Westminster</a></li><li><a href="richmond.html">Richmond</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">North Shore</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="north-vancouver.html">North Vancouver</a></li><li><a href="west-vancouver.html">West Vancouver</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Tri-Cities and Ridge Meadows</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="coquitlam.html">Coquitlam</a></li><li><a href="maple-ridge.html">Maple Ridge</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">South of the Fraser</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="surrey.html">Surrey</a></li><li><a href="delta.html">Delta</a></li><li><a href="white-rock.html">White Rock</a></li><li><a href="langley.html">Langley</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Fraser Valley</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="abbotsford.html">Abbotsford</a></li></ul></div></div><div style="width: 1px; background: var(--line-200)"></div><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 20px; font-weight: 500; min-width: 180px"><li><a href="areas.html">All service areas</a></li><li><a href="areas.html">Deadlines by region</a></li><li><a href="quote.html">Request a proposal</a></li></ul></div></div></div><a class="nl" href="about.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">About</a><a class="nl" href="faq.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">FAQ</a><a class="nl" href="blog.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Blog</a>
+</nav>
+<div style="flex: 1 1 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px">
+<a class="nav-cta" href="quote.html" style="padding: 10px 18px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 4px; white-space: nowrap"><span class="cta-d">Request a proposal</span><span class="cta-m">Get a proposal</span></a>
+<details class="mnav"><summary aria-label="Open menu"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20" stroke="#18221D" stroke-width="1.6"></path></svg></summary><div class="menu"><a href="index.html" aria-current="page">Home</a><a href="services.html">Services and planning sessions</a><a href="pricing.html">Pricing and process</a><a href="areas.html">Service areas</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ and contact</a><a href="quote.html">Request a proposal</a></div></details>
+</div>
+</div>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="top" style="background: var(--paper-050)">
+<div class="hero3" style="max-width: 1320px; margin: 0 auto; box-sizing: border-box; padding: 64px clamp(16px, 4vw, 48px) 64px; display: flex; flex-direction: column; gap: 40px">
+<div style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Inspected in person · Analysed with AI · Metro Vancouver and Fraser Valley</span>
+<h1 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: clamp(40px, 5.2vw, 66px); line-height: 1.05; letter-spacing: -0.01em; color: var(--ink-900)">Depreciation reports for BC strata corporations</h1>
+<div style="width: 56px; height: 3px; background: var(--evergreen-700)"></div>
+<p style="margin: 0; font-size: 18px; line-height: 28px; color: var(--ink-600); max-width: 540px">An in-person inspection by a designated appraiser, AI-assisted analysis, and a report every volunteer council member can follow. Prepared under CUSPAP 2026 and the <i>Strata Property Act</i>. Fixed fees from $2,000.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 8px">
+<a class="btn-p" href="quote.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Request a proposal</a>
+<a class="btn-o" href="#sample" style="padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">View a sample report</a>
+</div>
+</div>
+<div class="vhead" style="max-width: 860px; margin: 40px auto 24px; padding: 0 4px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">What your strata corporation maintains</span>
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: clamp(30px, 3.6vw, 42px); line-height: 1.12; color: var(--ink-900)">The components your strata corporation is responsible for</h2>
+<p style="margin: 0; font-size: 17px; line-height: 27px; color: var(--ink-600); max-width: 620px">Explore a typical townhouse complex and a typical low-rise apartment building below. Select any part to see its remaining life, today's cost and the future cost. Then book an inspection with us to see where your building stands.</p>
+<div class="vhs"><div><b>25 to 45</b><span>components in a typical townhouse complex</span></div><div><b>40 to 65</b><span>components in a typical low-rise apartment</span></div><div><b>60 to 80</b><span>components in a typical high-rise</span></div></div>
+<a class="btn-p" href="quote.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Book an inspection</a>
+</div>
+<div class="vis" style="display: flex; flex-direction: column; gap: 0; min-width: 0">
+<div class="vbar">
+<div class="msw"><button class="mbtn" type="button" data-dc-on-click="{{prevModel}}" aria-label="Previous model"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></button><div class="mlab"><span class="midx">{{modelIdx}}</span><b>{{modelName}}</b><span class="msub">{{modelSub}}</span></div><button class="mbtn" type="button" data-dc-on-click="{{nextModel}}" aria-label="Next model"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></button></div>
+<div class="steps3" role="group" aria-label="View"><sc-for list="{{steps}}" as="s" hint-placeholder-count="3"><button class="{{s.cls}}" type="button" data-dc-on-click="{{s.pick}}" aria-pressed="{{s.pressed}}"><span class="n">{{s.n}}</span><span>{{s.label}}</span></button></sc-for></div>
+<button class="fsb" type="button" data-dc-on-click="{{toggleFull}}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 6V2h4M10 2h4v4M14 10v4h-4M6 14H2v-4" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg><span>{{fullLabel}}</span></button>
+</div>
+<div class="{{stageCls}}" data-dc-ref="{{stageRef}}" style="position: relative; height: 720px; overflow: hidden; background: #C9D6E2">
+<sc-if value="{{glFail}}" hint-placeholder-val="{{ false }}"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/5ff131497777dcb674c0a65f8da2c913" alt="Four-storey wood-frame strata buildings among trees" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></sc-if>
+<sc-if value="{{glWait}}" hint-placeholder-val="{{ true }}"><div class="gl-wait" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; line-height: 18px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-600)">Building the model</div></sc-if>
+<canvas class="gl" data-dc-ref="{{canvasRef}}" aria-label="Interactive 3D model of a strata building. Drag to turn it." style="position: absolute; inset: 0; width: 100%; height: 100%; display: block"></canvas>
+<div class="hud"><span class="hud-dot" aria-hidden="true"></span>{{hud}}</div>
+<div class="tools3">
+<sc-if value="{{isExt}}" hint-placeholder-val="{{ true }}"><button class="ex-btn" type="button" data-dc-on-click="{{toggleEx}}" aria-pressed="{{exP}}"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 5.5h10M3 8h10M3 10.5h10M8 1.5v2M8 12.5v2" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>Exploded view</button></sc-if>
+<sc-if value="{{isFull}}" hint-placeholder-val="{{ false }}"><button class="icon3" type="button" data-dc-on-click="{{toggleFull}}" aria-label="Exit full screen"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></button></sc-if>
+</div>
+<sc-if value="{{showTours}}" hint-placeholder-val="{{ true }}"><div class="tour3" role="group" aria-label="Walk through"><sc-for list="{{tours}}" as="t" hint-placeholder-count="3"><button class="{{t.cls}}" type="button" data-dc-on-click="{{t.go}}">{{t.label}}</button></sc-for></div></sc-if>
+<sc-if value="{{showList}}" hint-placeholder-val="{{ true }}"><div class="clist" role="group" aria-label="Components"><div class="clh"><b>{{listTitle}}</b><span>{{listSub}}</span></div><div class="cls"><sc-for list="{{comps}}" as="c" hint-placeholder-count="12"><button class="{{c.cls}}" type="button" data-dc-on-click="{{c.pick}}" aria-pressed="{{c.pressed}}">{{c.name}}<span>{{c.sub}}</span></button></sc-for></div></div></sc-if>
+<sc-if value="{{showHint}}" hint-placeholder-val="{{ false }}"><div class="hint3">{{hintText}}</div></sc-if>
+<sc-if value="{{showCard}}" hint-placeholder-val="{{ false }}"><div class="card3" aria-live="polite"><p class="ck">{{cCode}}</p><h3 class="cn">{{cName}}</h3><div class="cg"><div class="cf on"><span>Remaining life</span><b>{{cRem}}</b></div><div class="cf"><span>Current cost</span><b>{{cCost}}</b><i>{{cBudget}}</i></div><div class="cf"><span>Projected cost</span><b>{{cProj}}</b><i>{{cYear}}</i></div></div><div class="cfoot"><span>{{cNote}}</span><sc-if value="{{hasMore}}" hint-placeholder-val="{{ false }}"><button class="more3" type="button" data-dc-on-click="{{openInfo}}">More info<svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M5 2l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.7"></path></svg></button></sc-if></div></div></sc-if>
+<sc-if value="{{showInfo}}" hint-placeholder-val="{{ false }}"><div class="info3" role="dialog" aria-label="Component details"><button class="icon3 ix" type="button" data-dc-on-click="{{closeInfo}}" aria-label="Close details"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg></button><p class="ck">{{cCode}}</p><h3 class="cn" style="font-size: 30px; line-height: 36px">{{cName}}</h3><p class="iallow">{{iAllow}}</p><div class="cg ig"><div class="cf on"><span>Remaining life</span><b>{{cRem}}</b></div><div class="cf"><span>Service life</span><b>{{iLife}}</b></div><div class="cf"><span>Effective age</span><b>{{iAge}}</b></div><div class="cf"><span>Current cost</span><b>{{cCost}}</b><i>{{cBudget}}</i></div><div class="cf"><span>Projected cost</span><b>{{cProj}}</b><i>{{cYear}}</i></div></div><dl class="irows"><sc-for list="{{iRows}}" as="r" hint-placeholder-count="5"><div><dt>{{r.k}}</dt><dd>{{r.v}}</dd></div></sc-for></dl><p class="inote">{{cNote}}</p></div></sc-if>
+<sc-if value="{{showLegend}}" hint-placeholder-val="{{ false }}"><div class="sp3"><b>{{panelT}}</b><p>{{panelB}}</p><ul class="lg3"><li><i style="background: #3F86E0"></i>Roofing</li><li><i style="background: #1FA67F"></i>Building envelope</li><sc-if value="{{legendLow}}" hint-placeholder-val="{{ true }}"><li><i style="background: #9A6BE0"></i>Elevator and mechanical</li><li><i style="background: #D98A2B"></i>Parkade</li></sc-if></ul></div></sc-if>
+<sc-if value="{{showYear}}" hint-placeholder-val="{{ false }}"><div class="sp3"><b>{{panelT}}</b><label class="yrl"><span>{{year}}</span><input class="yr" type="range" min="2026" max="2056" step="1" value="{{year}}" data-dc-on-input="{{setYear}}" data-dc-on-change="{{setYear}}" aria-label="Forecast year"></label><p>{{dueText}}</p></div></sc-if>
+<div class="turns">
+<button class="turn" type="button" data-dc-on-click="{{turnL}}" aria-label="Turn building left"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M7 4L3 8l4 4M3.5 8H11a4 4 0 0 1 0 8H9" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></button>
+<button class="turn" type="button" data-dc-on-click="{{turnR}}" aria-label="Turn building right"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 4l4 4-4 4M14.5 8H7a4 4 0 0 0 0 8h2" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg></button>
+</div>
+</div>
+</div>
+</div>
+<div style="background: var(--evergreen-900)">
+<div style="max-width: 1160px; box-sizing: border-box; margin: 0 auto; padding: 56px clamp(16px, 4vw, 48px) 68px; display: flex; flex-direction: column; align-items: center; gap: 26px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Watch · Ashgrove in 30 seconds</span>
+<video controls="" autoplay="" muted="" loop="" playsinline="" preload="metadata" poster="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/1dd5973ce60644e873fd5d9f616f1285" aria-label="Ashgrove Strata Advisors: depreciation reports and appraisals for BC strata corporations" style="width: 100%; max-width: 1040px; height: auto; aspect-ratio: 16 / 9; display: block; background: #0B1F17; border-radius: 10px; border: 1px solid rgba(255, 255, 255, 0.14); box-shadow: 0 32px 80px rgba(0, 0, 0, 0.38)"><source src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/af3dbcd4c211b5df4e4e027d2019e4a2" type="video/mp4"></video>
+<div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px 32px; padding: 20px 0 4px">
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.24); padding-top: 16px"><div style="font-family: var(--font-serif); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; color: #FFFFFF">$2,000</div><div style="margin-top: 8px; font-size: 14px; line-height: 21px; color: var(--sage-300)">Fixed fees from, agreed before we start</div></div>
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.24); padding-top: 16px"><div style="font-family: var(--font-serif); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; color: #FFFFFF">3 weeks</div><div style="margin-top: 8px; font-size: 14px; line-height: 21px; color: var(--sage-300)">Usual wait for your site inspection</div></div>
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.24); padding-top: 16px"><div style="font-family: var(--font-serif); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; color: #FFFFFF">30 years</div><div style="margin-top: 8px; font-size: 14px; line-height: 21px; color: var(--sage-300)">Of repair and replacement costs forecast</div></div>
+<div style="border-top: 1px solid rgba(255, 255, 255, 0.24); padding-top: 16px"><div style="font-family: var(--font-serif); font-size: clamp(30px, 3.4vw, 42px); line-height: 1.1; color: #FFFFFF">AACI</div><div style="margin-top: 8px; font-size: 14px; line-height: 21px; color: var(--sage-300)">And MRICS designated appraiser signs every report, backed by liability insurance</div></div>
+</div>
+<div style="width: 100%; max-width: 1040px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+<div class="nt" style="border: 1px solid rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.06); border-radius: 10px; padding: 18px 22px; font-size: 15px; line-height: 23px; color: var(--mist-100)"><b style="color: #FFFFFF">Secure 10% off.</b> Send a no-obligation quote request by March 1, 2027. <a href="pricing.html">See the offer</a></div>
+<div class="nt" style="border: 1px solid rgba(255, 255, 255, 0.16); background: rgba(255, 255, 255, 0.06); border-radius: 10px; padding: 18px 22px; font-size: 15px; line-height: 23px; color: var(--mist-100)"><b style="color: #FFFFFF">Is your strata behind?</b> If your last report is dated before December 31, 2020, the deadline in Metro Vancouver and the Fraser Valley was July 1, 2026. <a href="quote.html">Request a proposal</a>; we can usually inspect within three weeks.</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="why" aria-label="What stands behind your report" style="background: var(--evergreen-900); color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 64px 48px">
+<p style="margin: 0 0 10px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Behind every report</p>
+<h2 style="margin: 0 0 40px; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px; color: #FFFFFF; max-width: 760px">Reliable costing, professional inspection, AI-assisted analysis and a designated, insured professional</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 36px 40px">
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Reliable costing</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">Cost estimates draw on our database of comparable strata buildings, hands-on experience and recognized contractor cost sources, so your forecast reflects what work really costs.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Professional inspection</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">The appraiser who signs your report inspects every component in person and records its condition with photographs.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">AI-assisted analysis</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">AI organizes your records and speeds up analysis, so you get your report sooner: inspection usually within three weeks, draft about four weeks later. Every figure is checked by the appraiser.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Designated and insured</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">Signed by an AACI and MRICS designated member, backed by professional liability insurance. An AACI is a qualified person under <a href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_06#section94" target="_blank" rel="noopener" style="color: #FFFFFF">section 94 of the <i>Strata Property Act</i></a> and <a href="https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/12_43_2000#section6.2" target="_blank" rel="noopener" style="color: #FFFFFF">section 6.2 of the Strata Property Regulation</a>.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Easy to read</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">Plain words, clear charts and guided notes that walk council through each section. No more wrestling with equations or formulas.</p></div>
+<div style="border-top: 2px solid var(--sage-300); padding-top: 16px"><h3 style="margin: 0; font-family: var(--font-serif); font-weight: 400; font-size: 28px; line-height: 34px; color: #FFFFFF">Competitive fixed fees</h3><p style="margin: 8px 0 0; font-size: 15px; line-height: 23px; color: var(--mist-100)">Townhouse from $2,000, low-rise from $3,000, high-rise from $5,000, agreed before we start.</p><a href="pricing.html" style="display: inline-block; margin-top: 10px; font-size: 14px; font-weight: 600; color: #FFFFFF">See pricing</a></div>
+</div>
+</div>
+</section>
+
+<section id="serve" style="max-width: 1160px; margin: 0 auto; padding: 80px 48px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Who we serve</span>
+<h2 style="margin: 16px 0 12px; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px">Every type of strata building</h2>
+<p style="margin: 0 0 40px; color: var(--ink-600); max-width: 640px">Most of our clients are self-managed councils: volunteers who need a report they can understand, present to owners and act on.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+<div data-tip="We inspect roofs, siding, decks, paving and fencing on site, then forecast each one over 30 years." style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="Three-storey townhouses with garages" style="width: 100%; height: 100%; object-fit: cover; object-position: 55% 50%; display: block"></div>
+<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; line-height: 28px; font-weight: 600">Townhouses</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-600)">Roofs, siding, decks, garage doors, paving and fencing, the components that drive townhouse budgets.</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+<div data-tip="Envelope, roofing, parkade membrane, elevators and mechanical, each with its own cost and remaining life." style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/5ff131497777dcb674c0a65f8da2c913" alt="Four-storey wood-frame apartment buildings among trees" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block"></div>
+<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; line-height: 28px; font-weight: 600">Low-rise apartments</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-600)">Wood-frame buildings up to six storeys: envelope, roofing, parkade membranes, elevators and mechanical systems.</span></figcaption>
+</figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 16px">
+<div data-tip="Curtain wall, multiple elevators, life safety and building systems, planned across 30 years." style="aspect-ratio: 4 / 3; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="High-rise residential towers in Burnaby with mountains behind" style="width: 100%; height: 100%; object-fit: cover; object-position: 60% 50%; display: block"></div>
+<figcaption style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 20px; line-height: 28px; font-weight: 600">High-rise towers</span><span style="font-size: 15px; line-height: 24px; color: var(--ink-600)">Concrete towers with curtain wall, multiple elevators, life safety and building systems over a 30-year plan.</span></figcaption>
+</figure>
+</div>
+<p style="margin: 40px 0 0; padding-top: 20px; border-top: 1px solid var(--line-200); color: var(--ink-600)"><b style="color: var(--ink-900)">Also:</b> commercial strata, industrial strata and stratas with sections, such as residential and commercial sections with separate funds.</p>
+</section>
+
+<section id="explore" style="padding: 88px 0 72px; overflow: hidden">
+<div style="max-width: 760px; margin: 0 auto 40px; padding: 0 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Services</span>
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 44px; line-height: 50px; letter-spacing: -0.01em">What we do</h2>
+<p style="margin: 0; font-size: 18px; line-height: 28px; color: var(--ink-600)">Every assignment is prepared and signed by a designated appraiser who inspects the property in person. Select a card to learn more.</p>
+</div>
+<div class="track" style="display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 0 max(32px, calc((100% - 1096px) / 2)); scroll-padding-left: max(32px, calc((100% - 1096px) / 2))">
+<div class="cc" style="flex: none; width: 340px; aspect-ratio: 4 / 5; position: relative; border-radius: 12px; overflow: hidden; background: var(--mist-100); scroll-snap-align: start">
+<img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7314f01aa58671c3a3eafa919328f1ff" alt="Asphalt shingle roof gables against a blue sky" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,38,28,.78) 0%, rgba(14,38,28,0) 50%)"></div>
+<h3 style="position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; color: #FFFFFF; font-family: var(--font-serif); font-size: 28px; line-height: 34px; font-weight: 500">Depreciation reports</h3>
+<button type="button" data-dc-on-click="{{o1}}" aria-label="More about Depreciation reports" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer"><span class="plus" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="#18221D" stroke-width="1.8"></path></svg></span></button>
+</div><div class="cc" style="flex: none; width: 340px; aspect-ratio: 4 / 5; position: relative; border-radius: 12px; overflow: hidden; background: var(--mist-100); scroll-snap-align: start">
+<img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="High-rise residential towers with mountains behind" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,38,28,.78) 0%, rgba(14,38,28,0) 50%)"></div>
+<h3 style="position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; color: #FFFFFF; font-family: var(--font-serif); font-size: 28px; line-height: 34px; font-weight: 500">Insurance appraisals</h3>
+<button type="button" data-dc-on-click="{{o2}}" aria-label="More about Insurance appraisals" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer"><span class="plus" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="#18221D" stroke-width="1.8"></path></svg></span></button>
+</div><div class="cc" style="flex: none; width: 340px; aspect-ratio: 4 / 5; position: relative; border-radius: 12px; overflow: hidden; background: var(--mist-100); scroll-snap-align: start">
+<img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/49484681170f915203054e55aed9a1f0" alt="Aerial view of a Lower Mainland residential neighbourhood" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,38,28,.78) 0%, rgba(14,38,28,0) 50%)"></div>
+<h3 style="position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; color: #FFFFFF; font-family: var(--font-serif); font-size: 28px; line-height: 34px; font-weight: 500">Commercial appraisals</h3>
+<button type="button" data-dc-on-click="{{o3}}" aria-label="More about Commercial appraisals" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer"><span class="plus" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="#18221D" stroke-width="1.8"></path></svg></span></button>
+</div><div class="cc" style="flex: none; width: 340px; aspect-ratio: 4 / 5; position: relative; border-radius: 12px; overflow: hidden; background: var(--mist-100); scroll-snap-align: start">
+<img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="Three-storey townhouses with garages" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,38,28,.78) 0%, rgba(14,38,28,0) 50%)"></div>
+<h3 style="position: absolute; left: 24px; right: 24px; bottom: 22px; margin: 0; color: #FFFFFF; font-family: var(--font-serif); font-size: 28px; line-height: 34px; font-weight: 500">Residential appraisals</h3>
+<button type="button" data-dc-on-click="{{o4}}" aria-label="More about Residential appraisals" style="position: absolute; inset: 0; width: 100%; height: 100%; padding: 0; border: 0; background: transparent; cursor: pointer"><span class="plus" style="position: absolute; top: 16px; right: 16px; width: 44px; height: 44px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12" stroke="#18221D" stroke-width="1.8"></path></svg></span></button>
+</div>
+</div>
+<div style="max-width: 1096px; margin: 24px auto 0; padding: 0 32px; display: flex; justify-content: flex-end; gap: 8px">
+<button class="arr" type="button" data-dc-on-click="{{prev}}" aria-label="Previous cards" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-200); background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3L5 8l5 5" fill="none" stroke="#18221D" stroke-width="1.8"></path></svg></button>
+<button class="arr" type="button" data-dc-on-click="{{next}}" aria-label="Next cards" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-200); background: #FFFFFF; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3l5 5-5 5" fill="none" stroke="#18221D" stroke-width="1.8"></path></svg></button>
+</div>
+</section>
+<section id="with-report" style="background: var(--surface); border-top: 1px solid var(--line-200)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 72px 48px; display: flex; flex-wrap: wrap; gap: 32px 56px">
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">With your depreciation report</span>
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px">Support that continues after delivery</h2>
+</div>
+<div style="flex: 2 1 480px; min-width: 0">
+<div style="border-top: 1px solid var(--line-200); padding: 20px 0; display: flex; flex-wrap: wrap; gap: 6px 24px; align-items: baseline"><span style="flex: 0 0 90px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Included</span><div style="flex: 1 1 300px"><h3 style="margin: 0 0 4px; font-size: 18px; line-height: 26px; font-weight: 600">Keep your report current</h3><p style="margin: 0; color: var(--ink-600)">A free yearly check-in keeps your strata's file up to date, so a new council starts from current information. <a href="services.html">How it works</a></p></div></div>
+<div style="border-top: 1px solid var(--line-200); border-bottom: 1px solid var(--line-200); padding: 20px 0; display: flex; flex-wrap: wrap; gap: 6px 24px; align-items: baseline"><span style="flex: 0 0 90px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass-600)">Optional</span><div style="flex: 1 1 300px"><h3 style="margin: 0 0 4px; font-size: 18px; line-height: 26px; font-weight: 600">Funding planning sessions</h3><p style="margin: 0; color: var(--ink-600)">Test contribution and project options with us online before each AGM, from $300 per session. <a href="services.html">How it works</a></p></div></div>
+</div>
+</div>
+</section>
+
+<section id="sample" style="background: var(--mist-100)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 64px 48px; display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center">
+<div style="flex: 0 1 260px; min-width: 0"><div style="aspect-ratio: 8.5 / 11; width: 100%; max-width: 260px; background: var(--evergreen-700); color: #FFFFFF; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--line-200); box-sizing: border-box">
+<div style="display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600"><svg width="14" height="15" viewBox="0 0 40 44" aria-hidden="true"><path fill="#FFFFFF" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#FFFFFF" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg>Ashgrove Strata Advisors</div>
+<div><div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-300)">Depreciation report</div><div style="font-family: var(--font-serif); font-size: 30px; line-height: 34px; margin-top: 8px">Maple Grove Townhomes</div><div style="font-size: 12px; color: var(--mist-100); margin-top: 8px">Sample report · fictional property</div></div>
+</div></div>
+<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--evergreen-700)">Sample report</span>
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px">See what your council receives</h2>
+<p style="margin: 0; color: var(--ink-600)">A sample depreciation report for a fictional 24-lot townhouse: a one-page summary in plain words, a building-at-a-glance page for owners and buyers, a page for every component, the strata plan and site map, the reserve fund history, three 30-year funding models (minimum, fair share and full funding) and the 30-year expenditure tables.</p>
+<a class="btn-o" href="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/c2d577650072c2f30d2015f6df02c8b4" download="Ashgrove-Sample-Depreciation-Report.pdf" target="_blank" rel="noopener" style="align-self: flex-start; padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">Download sample report (PDF)</a>
+</div>
+</div>
+</section>
+
+<section aria-label="Next step">
+<div style="max-width: 1160px; margin: 0 auto; padding: 72px 48px; display: flex; flex-wrap: wrap; gap: 24px 56px; align-items: center; justify-content: space-between">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 36px; line-height: 42px">Fixed fees from $2,000</h2>
+<p style="margin: 0; color: var(--ink-600); max-width: 560px">Townhouse from $2,000, low-rise from $3,000, high-rise from $5,000, before GST. Commercial, industrial and sectioned stratas quoted individually. Your proposal confirms the fee before we start.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a class="btn-p" href="quote.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Request a proposal</a>
+<a class="btn-o" href="pricing.html" style="padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">See pricing</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer class="ft" style="background: var(--evergreen-900); color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 64px 48px; display: flex; flex-wrap: wrap; gap: 40px 56px">
+<div style="flex: 2 1 300px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px"><svg width="26" height="29" viewBox="0 0 40 44" aria-hidden="true"><path fill="#FFFFFF" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#FFFFFF" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg><span style="font-size: 17px; font-weight: 600">Ashgrove Strata Advisors</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: var(--mist-100); max-width: 340px">Depreciation reports, insurance appraisals and property appraisals in Metro Vancouver and the Fraser Valley, by an Accredited Appraiser (AACI, MRICS).</p>
+<p style="margin: 0; font-size: 15px; line-height: 26px; color: var(--mist-100)">[Phone]<br>[Email]</p>
+<a class="btn-w" href="quote.html" style="align-self: flex-start; margin-top: 4px; padding: 12px 22px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 2px">Request a proposal</a>
+</div>
+<nav aria-label="Footer" style="flex: 1 1 150px">
+<p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Pages</p>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 24px"><li style="padding: 3px 0"><a href="index.html">Home</a></li><li style="padding: 3px 0"><a href="services.html">Services</a></li><li style="padding: 3px 0"><a href="pricing.html">Pricing</a></li><li style="padding: 3px 0"><a href="areas.html">Service areas</a></li><li style="padding: 3px 0"><a href="about.html">About</a></li><li style="padding: 3px 0"><a href="faq.html">FAQ</a></li><li style="padding: 3px 0"><a href="blog.html">Blog</a></li><li style="padding: 3px 0"><a href="quote.html">Request a proposal</a></li></ul>
+</nav>
+<nav aria-label="Service areas" style="flex: 2 1 300px">
+<p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Service areas</p>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 24px; columns: 2; column-gap: 24px"><li style="padding: 3px 0"><a href="abbotsford.html">Abbotsford</a></li><li style="padding: 3px 0"><a href="burnaby.html">Burnaby</a></li><li style="padding: 3px 0"><a href="coquitlam.html">Coquitlam</a></li><li style="padding: 3px 0"><a href="delta.html">Delta</a></li><li style="padding: 3px 0"><a href="langley.html">Langley</a></li><li style="padding: 3px 0"><a href="maple-ridge.html">Maple Ridge</a></li><li style="padding: 3px 0"><a href="new-westminster.html">New Westminster</a></li><li style="padding: 3px 0"><a href="north-vancouver.html">North Vancouver</a></li><li style="padding: 3px 0"><a href="richmond.html">Richmond</a></li><li style="padding: 3px 0"><a href="surrey.html">Surrey</a></li><li style="padding: 3px 0"><a href="vancouver.html">Vancouver</a></li><li style="padding: 3px 0"><a href="west-vancouver.html">West Vancouver</a></li><li style="padding: 3px 0"><a href="white-rock.html">White Rock</a></li></ul>
+</nav>
+</div>
+<div style="border-top: 1px solid var(--evergreen-700)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 24px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; line-height: 20px; color: var(--sage-300)">
+<span>© 2026 Ashgrove Strata Advisors · Metro Vancouver, BC</span>
+<span>Depreciation reports · Insurance appraisals · Commercial appraisals · Residential appraisals</span>
+</div>
+</div>
+</footer>
+
+<sc-if value="{{m1}}" hint-placeholder-val="{{ false }}">
+<div data-dc-on-click="{{closeBg}}" style="position: fixed; inset: 0; z-index: 100; background: rgba(24,34,29,.45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); overflow-y: auto">
+<div class="dlg" role="dialog" aria-modal="true" aria-label="Depreciation reports" style="position: relative; max-width: 1120px; margin: 24px auto; max-height: calc(100vh - 48px); overflow-y: auto; background: #FFFFFF; border-radius: 12px">
+<button class="dlg-x" type="button" data-dc-on-click="{{close}}" aria-label="Close" style="position: sticky; top: 16px; float: right; margin: 16px 16px -60px 0; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,.12)"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="#18221D" stroke-width="1.8"></path></svg></button>
+<div style="height: 280px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7314f01aa58671c3a3eafa919328f1ff" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+<div class="dlg-b" style="padding: 56px 88px 72px; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0 0 8px; text-align: center; font-family: var(--font-serif); font-weight: 500; font-size: 40px; line-height: 46px">A report your council can follow</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px 48px"><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">What every report includes</h3><div style="color: var(--ink-600)">An on-site inspection, an inventory of common property and assets, a 30-year forecast of repair and replacement costs, and three funding models: minimum, fair share and full funding.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Written in plain words</h3><div style="color: var(--ink-600)">A one-page summary, a building-at-a-glance page for owners and buyers, and a page for every component. No formulas to decode.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Included: keep your report current</h3><div style="color: var(--ink-600)">A free yearly check-in keeps your strata's file up to date for the life of the report.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Optional: funding planning sessions</h3><div style="color: var(--ink-600)">Test contribution and project options with us online before each AGM, from $300 per session, within 3 years of your report.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">AI-assisted, fast turnaround</h3><div style="color: var(--ink-600)">AI organizes your records and speeds up analysis. Inspection usually within three weeks, draft about four weeks later, all checked and signed by the appraiser.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Reliable costing</h3><div style="color: var(--ink-600)">Estimates draw on our database of comparable strata buildings, hands-on experience and recognized contractor cost sources.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Every kind of strata</h3><div style="color: var(--ink-600)">Townhouse, low-rise and high-rise, plus commercial, industrial and sectioned stratas. Prepared under CUSPAP 2026 and the <i>Strata Property Act</i> and Regulation.</div></div></div><div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 12px"><a class="btn-p" href="quote.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Request a proposal</a><a class="btn-o" href="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/c2d577650072c2f30d2015f6df02c8b4" download="Ashgrove-Sample-Depreciation-Report.pdf" target="_blank" rel="noopener" style="padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">Download sample report (PDF)</a></div>
+</div>
+</div>
+</div>
+</sc-if><sc-if value="{{m2}}" hint-placeholder-val="{{ false }}">
+<div data-dc-on-click="{{closeBg}}" style="position: fixed; inset: 0; z-index: 100; background: rgba(24,34,29,.45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); overflow-y: auto">
+<div class="dlg" role="dialog" aria-modal="true" aria-label="Insurance appraisals" style="position: relative; max-width: 1120px; margin: 24px auto; max-height: calc(100vh - 48px); overflow-y: auto; background: #FFFFFF; border-radius: 12px">
+<button class="dlg-x" type="button" data-dc-on-click="{{close}}" aria-label="Close" style="position: sticky; top: 16px; float: right; margin: 16px 16px -60px 0; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,.12)"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="#18221D" stroke-width="1.8"></path></svg></button>
+<div style="height: 280px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+<div class="dlg-b" style="padding: 56px 88px 72px; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0 0 8px; text-align: center; font-family: var(--font-serif); font-weight: 500; font-size: 40px; line-height: 46px">Insure for the right amount</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px 48px"><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Replacement cost appraisals</h3><div style="color: var(--ink-600)">An appraisal of what it would cost to rebuild your strata's buildings, so council can set the right insured value.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Add it to your report</h3><div style="color: var(--ink-600)">Add an insurance appraisal to your depreciation report proposal and we use the same site visit.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Yearly updates</h3><div style="color: var(--ink-600)">Insurers often ask for updated values each year. We can provide them between full appraisals.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Same appraiser</h3><div style="color: var(--ink-600)">Prepared and signed by the Accredited Appraiser who knows your building.</div></div></div><div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 12px"><a class="btn-p" href="quote.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Request a proposal</a><a class="btn-o" href="pricing.html" style="padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">See pricing</a></div>
+</div>
+</div>
+</div>
+</sc-if><sc-if value="{{m3}}" hint-placeholder-val="{{ false }}">
+<div data-dc-on-click="{{closeBg}}" style="position: fixed; inset: 0; z-index: 100; background: rgba(24,34,29,.45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); overflow-y: auto">
+<div class="dlg" role="dialog" aria-modal="true" aria-label="Commercial appraisals" style="position: relative; max-width: 1120px; margin: 24px auto; max-height: calc(100vh - 48px); overflow-y: auto; background: #FFFFFF; border-radius: 12px">
+<button class="dlg-x" type="button" data-dc-on-click="{{close}}" aria-label="Close" style="position: sticky; top: 16px; float: right; margin: 16px 16px -60px 0; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,.12)"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="#18221D" stroke-width="1.8"></path></svg></button>
+<div style="height: 280px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/49484681170f915203054e55aed9a1f0" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+<div class="dlg-b" style="padding: 56px 88px 72px; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0 0 8px; text-align: center; font-family: var(--font-serif); font-weight: 500; font-size: 40px; line-height: 46px">An independent opinion of market value</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px 48px"><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Property types</h3><div style="color: var(--ink-600)">Office, retail, industrial, mixed-use and multi-family rental buildings, and development land.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">What it is used for</h3><div style="color: var(--ink-600)">Financing, purchase or sale, lease and partnership matters, tax and financial reporting.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Standards</h3><div style="color: var(--ink-600)">Prepared under CUSPAP by an AACI, with an in-person inspection.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Fee</h3><div style="color: var(--ink-600)">Quoted for each assignment.</div></div></div><div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 12px"><a class="btn-p" href="faq.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Ask about a commercial appraisal</a><a class="btn-o" href="services.html" style="padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">See all services</a></div>
+</div>
+</div>
+</div>
+</sc-if><sc-if value="{{m4}}" hint-placeholder-val="{{ false }}">
+<div data-dc-on-click="{{closeBg}}" style="position: fixed; inset: 0; z-index: 100; background: rgba(24,34,29,.45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); overflow-y: auto">
+<div class="dlg" role="dialog" aria-modal="true" aria-label="Residential appraisals" style="position: relative; max-width: 1120px; margin: 24px auto; max-height: calc(100vh - 48px); overflow-y: auto; background: #FFFFFF; border-radius: 12px">
+<button class="dlg-x" type="button" data-dc-on-click="{{close}}" aria-label="Close" style="position: sticky; top: 16px; float: right; margin: 16px 16px -60px 0; z-index: 2; width: 44px; height: 44px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,.12)"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13" stroke="#18221D" stroke-width="1.8"></path></svg></button>
+<div style="height: 280px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></div>
+<div class="dlg-b" style="padding: 56px 88px 72px; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0 0 8px; text-align: center; font-family: var(--font-serif); font-weight: 500; font-size: 40px; line-height: 46px">Market value appraisals of homes</h2><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 8px 48px"><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Property types</h3><div style="color: var(--ink-600)">Houses, townhouses and condominium units, including strata lots.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">What it is used for</h3><div style="color: var(--ink-600)">Financing, purchase or sale, estate and family matters, and tax.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Standards</h3><div style="color: var(--ink-600)">Prepared under CUSPAP by an AACI, with an in-person inspection.</div></div><div style="border-top: 1px solid var(--line-200); padding: 20px 0"><h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 600">Fee</h3><div style="color: var(--ink-600)">Quoted for each assignment.</div></div></div><div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; padding-top: 12px"><a class="btn-p" href="faq.html" style="padding: 14px 24px; font-size: 16px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 2px">Ask about a residential appraisal</a><a class="btn-o" href="services.html" style="padding: 13px 23px; font-size: 16px; font-weight: 600; text-decoration: none; color: var(--evergreen-700); border: 1px solid var(--evergreen-700); border-radius: 2px">See all services</a></div>
+</div>
+</div>
+</div>
+</sc-if>
+</div></template>
+<script>
+class Component extends DCLogic {
+  pins = [];
+  state = { open: 0, model: "low", step: 0, sel: -1, year: 2036, ex: false, view: "ext", info: false, full: false, q: "", glReady: false, glFail: false };
+  componentDidMount() {
+    try { this.reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches; } catch (e) { this.reduce = false; }
+    this.tryGL(0);
+  }
+  componentDidUpdate() { this.sync(); }
+  componentWillUnmount() { this.dead = true; clearTimeout(this.glT); try { document.documentElement.style.overflow = ""; } catch (e) {} if (this.api) { this.api.dispose(); this.api = null; } }
+  tryGL(n) {
+    if (this.api || this.dead) return;
+    if (window.ashgroveScene && window.THREE && this.canvas && this.stage) {
+      var api = null;
+      try { api = window.ashgroveScene(this.canvas, this.stage, this.pins, { reduce: this.reduce, onClick: (i) => this.onPick(i) }); } catch (e) { api = null; }
+      if (!api) { this.setState({ glFail: true }); return; }
+      this.api = api; this.last = {}; this.sync(); this.setState({ glReady: true });
+      return;
+    }
+    if (n > 120) { this.setState({ glFail: true }); return; }
+    this.glT = setTimeout(() => this.tryGL(n + 1), 150);
+  }
+  data() { const D = window.ashgroveData || {}; return D[this.state.model] || []; }
+  onPick(i) {
+    if (i === -2) return;
+    if (i === -3) { this.setState({ view: "lobby", step: 0, ex: false, sel: -1, info: false }); return; }
+    if (i === -4) { const gi = this.data().findIndex((c) => c.n === "Overhead Parkade Gate"); this.setState({ view: "park", step: 0, ex: false, sel: gi, info: false }); return; }
+    this.setState({ sel: i >= 0 ? i : -1, info: false });
+  }
+  sync() {
+    const a = this.api, s = this.state;
+    if (this.lastFull !== s.full) { this.lastFull = s.full; try { document.documentElement.style.overflow = s.full ? "hidden" : ""; } catch (e) {} }
+    if (!a) return;
+    const l = this.last;
+    if (!l.big) { a.setBig(true); l.big = true; }
+    if (l.model !== s.model) { if (l.model !== undefined) a.setModel(s.model); l.model = s.model; l.sel = undefined; }
+    if (l.view !== s.view) { a.goto(s.view); l.view = s.view; }
+    if (l.step !== s.step) { a.setStep(s.step); l.step = s.step; }
+    if (l.sel !== s.sel) { a.setSel(s.sel); l.sel = s.sel; }
+    if (l.year !== s.year) { a.setYear(s.year); l.year = s.year; }
+    if (l.ex !== s.ex) { a.setExplode(s.ex); l.ex = s.ex; }
+  }
+  toggleFull() {
+    const on = !this.state.full, el = this.stage;
+    try {
+      if (on && el && el.requestFullscreen && !document.fullscreenElement) el.requestFullscreen().catch(() => {});
+      if (!on && document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(() => {});
+    } catch (e) {}
+    this.setState({ full: on });
+  }
+  renderVals() {
+    const st = this.state || {};
+    const o = st.open || 0, step = st.step || 0, sel = st.sel == null ? -1 : st.sel, year = st.year || 2036, ex = !!st.ex, view = st.view || "ext", ext = view === "ext", model = st.model || "low", low = model === "low";
+    const set = (n) => () => this.setState({ open: n });
+    const scroll = (dir) => (e) => { const s = e.currentTarget.closest("section"); const t = s && s.querySelector(".track"); if (t) t.scrollBy({ left: dir * t.clientWidth * 0.8, behavior: "smooth" }); };
+    const C = this.data();
+    const rem = (c) => Math.max(0, c.life - c.age);
+    const remText = (c) => (c.life === 0 && c.age === 0) ? "Not set" : rem(c) <= 0 ? "Due now" : rem(c) + (rem(c) === 1 ? " year" : " years");
+    const c = sel >= 0 ? C[sel] : null;
+    const NAV = {
+      ext: ["Exterior", [["lobby", "Walk in · Lobby"], ["park", "Drive in · Parkade"], ["patio", "Patio and pool"]]],
+      lobby: ["Lobby", [["corrW", "To the elevator"], ["corrE", "Down the corridor"], ["ext", "Back outside"]]],
+      corrW: ["Corridor · Elevator landing", [["elevL", "Take the elevator"], ["corrE", "Down the corridor"], ["lobby", "Back to the lobby"]]],
+      corrE: ["Corridor", [["club", "Enter the clubhouse"], ["corrW", "To the elevator"], ["lobby", "Back to the lobby"]]],
+      club: ["Clubhouse amenity room", [["patio", "Out to the patio"], ["corrE", "Back to the corridor"]]],
+      patio: ["Patio", [["pool", "To the pool"], ["club", "Into the clubhouse"], ["ext", "Back to the street"]]],
+      pool: ["Swimming pool", [["patio", "Back to the patio"]]],
+      elevL: ["Elevator · Lobby level", [["elevR", "R · Rooftop"], ["elevP", "P1 · Parkade"], ["corrW", "Step out"]]],
+      elevP: ["Elevator · P1 Parkade", [["elevL", "L · Lobby"], ["elevR", "R · Rooftop"], ["p1", "Step out"]]],
+      elevR: ["Elevator · Rooftop", [["elevL", "L · Lobby"], ["elevP", "P1 · Parkade"], ["roof", "Step out"]]],
+      p1: ["Underground parkade", [["elevP", "Take the elevator"], ["mech", "Mechanical room"], ["elec", "Electrical room"], ["store", "Storage and bikes"], ["ext", "Drive out"]]],
+      park: ["Underground parkade", [["elevP", "Take the elevator"], ["mech", "Mechanical room"], ["elec", "Electrical room"], ["store", "Storage and bikes"], ["ext", "Drive out"]]],
+      store: ["Storage lockers and bike room", [["p1", "Back to the elevator"], ["mech", "Mechanical room"], ["elec", "Electrical room"]]],
+      mech: ["Mechanical room", [["p1", "Back to the elevator"], ["elec", "Electrical room"], ["store", "Storage and bikes"]]],
+      elec: ["Electrical room", [["p1", "Back to the elevator"], ["mech", "Mechanical room"], ["store", "Storage and bikes"]]],
+      roof: ["Rooftop", [["mroom", "Elevator machine room"], ["elevR", "Take the elevator"]]],
+      mroom: ["Elevator machine room", [["roof", "Back to the roof"], ["elevR", "Take the elevator"]]]
+    };
+    const nav = NAV[view] || NAV.ext;
+    const go = (v) => () => this.setState({ view: v, sel: -1, info: false, ex: false, step: 0 });
+    const near = C.filter((x) => x.y <= year && x.y > year - 3).map((x) => x.n);
+    const S = ["Inspect", "Analyse with AI", "Forecast"];
+    const d = c && c.d ? c.d : null;
+    const rows = [];
+    if (d) {
+      if (d.desc) rows.push({ k: "Description", v: d.desc });
+      rows.push({ k: "Age", v: c.age + (c.age === 1 ? " year effective age" : " years effective age") });
+      rows.push({ k: "Condition analysis", v: d.condan || (d.noinsp ? "Not inspected: limited access at the time of review." : "Not recorded.") });
+      if (d.factors) rows.push({ k: "Factors contributing to deterioration", v: d.factors });
+      if (d.scope) rows.push({ k: "Scope of work", v: d.scope });
+      if (d.rec) rows.push({ k: "Recommendation", v: d.rec });
+    }
+    const src = (x) => "";
+    const remShort = (x) => { const t = remText(x); return t === "Due now" || t === "Not set" ? t : t + " remaining"; };
+    const models = [["low", "Low-rise apartment", "Typical building · " + ((window.ashgroveData || {}).low || []).length + " components"], ["town", "Townhouses", "Typical complex · " + ((window.ashgroveData || {}).town || []).length + " components"]];
+    const mi = low ? 0 : 1;
+    const flip = (dir) => () => { const n = models[(mi + dir + 2) % 2][0]; this.setState({ model: n, view: "ext", sel: -1, step: 0, info: false, ex: false }); };
+    const v = {
+      m1: o === 1, o1: set(1), m2: o === 2, o2: set(2), m3: o === 3, o3: set(3), m4: o === 4, o4: set(4),
+      close: set(0), closeBg: (e) => { if (e.target === e.currentTarget) this.setState({ open: 0 }); }, prev: scroll(-1), next: scroll(1),
+      stageCls: st.full ? "stage full" : "stage",
+      stageRef: (el) => { this.stage = el; },
+      canvasRef: (el) => { this.canvas = el; },
+      glWait: !st.glReady && !st.glFail, glFail: !!st.glFail,
+      isExt: ext && low,
+      modelIdx: "0" + (mi + 1) + " / 02", modelName: models[mi][1], modelSub: models[mi][2],
+      prevModel: flip(-1), nextModel: flip(1),
+      fullLabel: st.full ? "Exit full screen" : "Full screen", toggleFull: () => this.toggleFull(), isFull: !!st.full, notFull: !st.full,
+      hud: ext ? (step === 0 ? (low ? "Live 3D model · select any part" : "Townhouses · select any part") : step === 1 ? "AI analysis · building the digital model" : "Forecast · " + year) : nav[0] + " · drag to look around",
+      exP: ex ? "true" : "false",
+      toggleEx: () => this.setState({ ex: !ex }),
+      turnL: () => { if (this.api) this.api.turn(-45); },
+      turnR: () => { if (this.api) this.api.turn(45); },
+      steps: S.map((label, i) => ({ n: "0" + (i + 1), label: label, cls: step === i ? "st3 on" : "st3", pressed: step === i ? "true" : "false", pick: () => this.setState({ step: i, sel: -1, info: false, view: i === 0 ? view : "ext" }) })),
+      showTours: step === 0 && low,
+      tours: nav[1].map((t) => ({ label: t[1], cls: t[0] === "ext" || t[1].indexOf("Back") === 0 ? "t3" : "t3 go", go: go(t[0]) })),
+      showList: step === 0,
+      listTitle: C.length + " components",
+      listSub: low ? "Typical low-rise apartment building" : "Typical townhouse complex",
+      comps: C.map((x, i) => ({ name: x.n, sub: remShort(x) + " · " + x.proj, cls: sel === i ? "cl on" : "cl", pressed: sel === i ? "true" : "false", pick: () => this.setState({ sel: sel === i ? -1 : i, info: false }) })),
+      showCard: step === 0 && !!c && !st.info, showHint: step === 0 && !c,
+      cCode: "",
+      cName: c ? c.n : "",
+      cRem: c ? remText(c) : "",
+      cCost: c ? c.cost : "", cBudget: c ? (c.bud ? "Today, " + c.bud : "Today") : "",
+      cProj: c ? c.proj : "", cYear: c ? (String(c.proj).indexOf("Beyond") === 0 ? "Outside the 30-year period" : "In " + c.y) : "",
+      cNote: c ? src(c) : "",
+      hasMore: !!(c && d), openInfo: () => this.setState({ info: true }),
+      showInfo: step === 0 && !!c && !!st.info, closeInfo: () => this.setState({ info: false }),
+      iRows: rows, iLife: c ? (c.life ? c.life + " years" : "Not set") : "", iAge: c ? c.age + " years" : "", iAllow: d && d.allow ? "Repair / renewal allowance" : "",
+      hintText: low ? (ext ? "Select any part of the building, or a component from the list. Select the front entrance to walk in, or the parkade gate to drive in." : "Drag to look around. Select a part, such as the elevator doors or the garage door, to see its figures.") : "Select any part of the townhouses, or a component from the list, to see its remaining life, current cost and projected cost.",
+      panelT: step === 0 ? "On site, in person" : step === 1 ? "AI turns site data into a digital model" : "See the next 30 years",
+      panelB: step === 0 ? "The appraiser who signs your report inspects every component and photographs its condition." : step === 1 ? "Inspection photos, plans and records are organized component by component, so the analysis is faster. Every figure is still checked and signed by the appraiser." : "Drag the years to see which components come due.",
+      showLegend: step === 1, showYear: step === 2, year: year, legendLow: low,
+      setYear: (e) => { const y = parseInt(e.target.value, 10); if (y && y !== year) this.setState({ year: y }); },
+      dueText: near.length ? "Due around " + year + ": " + near.join(", ") + "." : "No components due around " + year + " in this example."
+    };
+    return v;
+  }
+}
+dcStart(Component, {});
+</script>
+</body>
+</html>

@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Request a Depreciation Report Proposal | Ashgrove Strata Advisors</title>
+<meta name="description" content="Tell us about your BC strata property and records and receive a written fixed-fee proposal for your depreciation report, usually within one business day.">
+<link rel="stylesheet" href="assets/tokens.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F6F2}
+a{color:#308049}a:hover{color:#1F4D3A}
+
+/* Sticky header: fixed to the top, page content starts below it */
+main{padding-top:117px}
+[id]{scroll-margin-top:136px}
+.mnav{display:none}
+.nl{position:relative}
+.nl::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:2px;background:var(--evergreen-700);transform:scaleX(0);transform-origin:left}
+.nl[aria-current="page"]{color:var(--evergreen-700)!important;font-weight:600}
+.nl[aria-current="page"]::after{transform:scaleX(1)}
+.ft a{color:var(--mist-100);text-decoration:none}
+.chip{display:inline-block;padding:8px 14px;border:1px solid var(--line-200);border-radius:999px;font-size:14px;line-height:20px;color:var(--ink-900);background:var(--surface);text-decoration:none}
+a.chip{color:var(--evergreen-700);font-weight:600}
+a.chip:hover{border-color:var(--evergreen-700);background:#E8F0EB}
+a.card{text-decoration:none;color:var(--ink-900)}
+a.card:hover h3{color:var(--evergreen-700)}
+.bc a{color:var(--ink-600)}
+.ft a:hover{color:#FFFFFF;text-decoration:underline}
+
+.if-pm,.if-agm,.if-sec{display:none!important}
+form:has(select[name="sections"] option[value="yes"]:checked) .if-sec{display:flex!important}
+form:has(select[name="managed"] option[value="pm"]:checked) .if-pm{display:flex!important}
+form:has(select[name="timing"] option[value="agm"]:checked) .if-agm{display:flex!important}
+
+/* Motion */
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+@keyframes drift{from{transform:scale(1.12)}to{transform:scale(1)}}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media (prefers-reduced-motion: no-preference){
+ html{scroll-behavior:smooth}
+ #top>div>div:first-child>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+ #top>div>div:first-child>*:nth-child(1){animation-delay:.05s}
+ #top>div>div:first-child>*:nth-child(2){animation-delay:.15s}
+ #top>div>div:first-child>*:nth-child(3){animation:grow .8s .35s cubic-bezier(.2,.7,.2,1) both;transform-origin:left}
+ #top>div>div:first-child>*:nth-child(4){animation-delay:.4s}
+ #top>div>div:first-child>*:nth-child(5){animation-delay:.5s}
+ #top>div>div:first-child>*:nth-child(6){animation-delay:.6s}
+ #top>div>div:first-child>*:nth-child(7){animation-delay:.7s}
+ #top>div>div:last-child{animation:fadein 1.2s .2s ease both}
+ #top>div>div:last-child img{animation:drift 14s ease-out both}
+ .ph>div>*{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+ .ph>div>*:nth-child(2){animation-delay:.1s}
+ .ph>div>*:nth-child(3){animation-delay:.2s}
+ .ph>div>*:nth-child(4){animation-delay:.3s}
+
+ /* hover */
+ .nl,.btn-p,.btn-o,.nav-cta{transition:background-color .25s,color .25s,transform .25s,box-shadow .25s}
+ .nl::after{transition:transform .3s}
+ .nl:hover::after{transform:scaleX(1)}
+ .btn-p:hover,.nav-cta:hover{background:#163A2B!important;color:#FFFFFF!important;transform:translateY(-2px);box-shadow:0 8px 20px rgba(31,77,58,.25)}
+ .btn-o:hover{background:var(--evergreen-700)!important;color:#FFFFFF!important}
+ .btn-w:hover{background:#FFFFFF!important;color:var(--evergreen-900)!important}
+ figure [style*="aspect-ratio: 4 / 3"] img,#services [style*="aspect-ratio: 4 / 3"] img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+ figure:hover [style*="aspect-ratio: 4 / 3"] img,#services [style*="aspect-ratio: 4 / 3"]:hover img{transform:scale(1.06)}
+ .card{transition:transform .3s,border-color .3s}
+ .card:hover{transform:translateY(-4px)}
+ #pricing [style*="padding: 24px 24px 24px 0"]{box-shadow:inset 0 -2px 0 transparent;transition:transform .3s,box-shadow .3s}
+ #pricing [style*="padding: 24px 24px 24px 0"]:hover{transform:translateY(-4px);box-shadow:inset 0 -2px 0 var(--evergreen-700)}
+ #services [style*="padding: 24px 0"]{transition:padding-left .3s,background-color .3s}
+ #services [style*="padding: 24px 0"]:hover{padding-left:12px!important;background:var(--surface)}
+
+ /* hover reveal text */
+ [data-tip]{position:relative;cursor:default}
+ [data-tip]::after{content:attr(data-tip);position:absolute;inset:0;display:flex;align-items:flex-end;padding:20px;box-sizing:border-box;background:linear-gradient(to top,rgba(14,38,28,.94) 0%,rgba(14,38,28,.82) 60%,rgba(14,38,28,.55) 100%);color:#FFFFFF;font-family:var(--font-sans);font-size:15px;line-height:22px;font-weight:500;opacity:0;transform:translateY(12px);transition:opacity .35s,transform .35s cubic-bezier(.2,.7,.2,1);pointer-events:none;z-index:2}
+ [data-tip]:hover::after{opacity:1;transform:none}
+ #pricing [data-tip]::after{padding:16px;font-size:14px;line-height:20px;align-items:center}
+
+ /* reveal on scroll */
+ @supports (animation-timeline: view()){
+  main section:not(#top):not(.ph) h2,main section figure,.card,#services [style*="padding: 24px 0"],#pricing [style*="padding: 24px 24px 24px 0"],#planning li,#current [style*="padding: 20px 0"],#faq [style*="padding: 20px 0"],#quote form{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 22%}
+  section[aria-label="Photograph"] img{animation:drift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+ }
+}
+@media (max-width: 760px){
+ main{padding-top:101px}
+ [id]{scroll-margin-top:116px}
+ [style*="padding: 80px 48px"],[style*="padding: 88px 48px"],[style*="padding: 96px 48px"],[style*="padding: 72px 48px"],[style*="padding: 64px 48px"]{padding-left:20px!important;padding-right:20px!important;padding-top:56px!important}
+ [style*="padding: 80px 48px;"],[style*="padding: 88px 48px;"],[style*="padding: 64px 48px;"]{padding-bottom:56px!important}
+ [style*="padding: 96px 48px 80px"]{padding-top:32px!important;padding-bottom:40px!important;gap:32px!important}
+ [style*="padding: 72px 48px 56px"]{padding-top:40px!important;padding-bottom:40px!important}
+ [style*="padding: 0 48px 48px"],[style*="padding: 24px 48px"],[style*="padding: 56px 48px"],[style*="padding: 36px 48px"],[style*="padding: 64px 48px"]{padding-left:20px!important;padding-right:20px!important}
+ header>div>div{height:64px!important;gap:10px!important}
+ header a:first-child svg{width:22px;height:25px;flex:none}
+ .nl{display:none!important}
+ .nav-cta{margin-left:0!important;padding:10px 12px!important;font-size:14px!important;white-space:nowrap}
+ .mnav{display:block}
+ .mnav summary{list-style:none;cursor:pointer;width:42px;height:42px;display:flex;align-items:center;justify-content:center;border:1px solid #D9E0DB;border-radius:2px}
+ .mnav summary::-webkit-details-marker{display:none}
+ .mnav[open] summary{background:#E8F0EB}
+ .mnav .menu{position:absolute;left:0;right:0;top:100%;max-height:calc(100vh - 101px);overflow-y:auto;background:#F7F6F2;border-bottom:1px solid #D9E0DB;padding:8px 20px 16px;display:flex;flex-direction:column;box-sizing:border-box}
+ .mnav .menu a{padding:14px 0;border-bottom:1px solid #D9E0DB;color:#18221D;text-decoration:none;font-size:17px}
+ .mnav .menu a[aria-current="page"]{color:#1F4D3A;font-weight:600}
+ #top h1,.ph h1{font-size:38px!important;line-height:44px!important}
+ #top [style*="aspect-ratio: 4 / 5"]{aspect-ratio:4/3!important}
+ h2[style*="font-size: 36px"],h2[style*="font-size: 40px"]{font-size:30px!important;line-height:36px!important}
+ #explore h2,#explore h1{font-size:32px!important;line-height:38px!important}
+ [style*="gap: 56px"],[style*="gap: 64px"]{gap:32px!important}
+ form[style*="grid-template-columns: repeat(2"]{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;padding:20px!important;gap:14px 12px!important}
+ form[style*="grid-template-columns: repeat(2"]>*:not(label:has(input[type="number"])){grid-column:1/-1}
+ form[style*="grid-template-columns: repeat(2"]>label:has(input[type="number"]){font-size:13px!important;justify-content:space-between;min-width:0}
+ form input,form select,form textarea{min-width:0;width:100%;box-sizing:border-box}
+ form button[type="submit"]{padding:16px 20px!important}
+ [style*="height: 440px"]{height:220px!important}
+ .shot-wide{display:none!important}
+ .shot-narrow{display:block!important}
+ table[style*="min-width: 460px"]{min-width:0!important}
+ table[style*="min-width: 460px"] td,table[style*="min-width: 460px"] th{padding:10px 8px!important;white-space:normal!important}
+ [style*="font-size: 40px; line-height: 48px"]{font-size:32px!important;line-height:40px!important}
+}
+
+/* Announcement bar */
+.annc-m,.cta-m{display:none}
+.annc a.annc-btn:hover{background:#163A2B!important}
+
+/* Nav: pill hover, mega menus */
+.nl{border-radius:4px}
+.nl:hover,.dd:hover>.nl,.dd:focus-within>.nl{background:#E8F0EB}
+.dd{height:76px;display:flex;align-items:center}
+.mega{position:fixed;left:0;right:0;top:116px;background:#FFFFFF;border-bottom:1px solid var(--line-200);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:2}
+.dd:hover .mega,.dd:focus-within .mega{opacity:1;visibility:visible;transform:none}
+.scrim{position:fixed;left:0;right:0;top:116px;bottom:0;background:rgba(24,34,29,.16);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;pointer-events:none;z-index:1}
+header:has(.dd:hover) .scrim,header:has(.dd:focus-within) .scrim{opacity:1;visibility:visible}
+.mt{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;text-decoration:none;color:var(--ink-900)}
+.mt img{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.mt:hover img{transform:scale(1.05)}
+.mt:hover .mt-l{color:var(--evergreen-700)}
+.ml a{color:var(--ink-900);text-decoration:none}
+.ml a:hover{color:var(--evergreen-700);text-decoration:underline}
+
+/* Card carousel */
+.track{scrollbar-width:none;-ms-overflow-style:none}
+.track::-webkit-scrollbar{display:none}
+.cc img{transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.cc:hover img{transform:scale(1.04)}
+.cc .plus{transition:transform .25s,background-color .25s}
+.cc:hover .plus{transform:rotate(90deg);background:#E8F0EB}
+.cc button:focus-visible{outline:3px solid #FFFFFF;outline-offset:-6px}
+.arr:hover{background:#E8F0EB!important}
+.arr:disabled{opacity:.35;cursor:default}
+
+/* Detail window */
+.dlg-x:hover{background:#E8F0EB!important}
+
+/* Floating action bar */
+.fbar a.fb-ask:hover{border-color:var(--evergreen-700)!important}
+.fbar a.fb-go:hover{background:#163A2B!important}
+@media (max-width: 760px){
+ .annc-d,.cta-d{display:none}
+ .annc-m,.cta-m{display:inline}
+ header nav[aria-label="Main"]{display:none!important}
+ header>div>div{padding:0 16px!important}
+ header a:first-child{min-width:0}
+ .brand{white-space:normal!important;font-size:15px!important;line-height:18px!important;max-width:120px}
+ main{padding-top:105px!important}
+ .dd{display:none!important}
+ .mega,.scrim{display:none!important}
+ .fbar{left:12px!important;right:12px!important;transform:none!important;bottom:12px!important}
+ .fbar .fb-hint{display:none}
+ .fbar a{flex:1 1 0;justify-content:center}
+ .cc{width:78vw!important}
+ .track{padding-left:20px!important;padding-right:20px!important;scroll-padding-left:20px!important}
+ .dlg{margin:0!important;height:100vh!important;max-height:none!important;border-radius:0!important}
+ .dlg-b{padding:28px 20px 40px!important}
+ .dlg-b h2{font-size:30px!important;line-height:36px!important}
+}
+</style>
+<script src="assets/dc-lite.js"></script>
+</head>
+<body>
+<div id="dc-root"><div style="font-family: var(--font-sans); color: var(--ink-900); background: var(--paper-050); min-height: 100vh; font-size: 16px; line-height: 26px">
+
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--paper-050)">
+<div class="annc" style="height: 40px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 14px; background: var(--mist-100); font-size: 14px; line-height: 18px; color: var(--ink-900)">
+<span class="annc-d">Send a no-obligation quote request by March 1, 2027 and secure 10% off</span><span class="annc-m">10% off by March 1, 2027</span>
+<a class="annc-btn" href="quote.html" style="flex: none; padding: 5px 12px; font-size: 13px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 3px">Get a quote</a>
+</div>
+<div style="border-bottom: 1px solid var(--line-200); background: var(--paper-050); position: relative; z-index: 3">
+<div style="max-width: 1240px; height: 76px; box-sizing: border-box; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html" style="flex: 1 1 0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink-900)">
+<svg width="26" height="29" viewBox="0 0 40 44" aria-hidden="true"><path fill="#1F4D3A" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#1F4D3A" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg>
+<span class="brand" style="font-size: 17px; font-weight: 600; letter-spacing: 0.01em; white-space: nowrap">Ashgrove Strata Advisors</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 2px">
+<div class="dd"><a class="nl" href="services.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Services<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" style="margin-left: 6px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a><div class="mega"><div style="max-width: 1160px; margin: 0 auto; padding: 36px 48px 44px; display: flex; justify-content: center; gap: 48px"><div style="display: flex; gap: 24px"><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7314f01aa58671c3a3eafa919328f1ff" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Depreciation reports</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Insurance appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/49484681170f915203054e55aed9a1f0" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Commercial appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Residential appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a></div><div style="width: 1px; background: var(--line-200)"></div><ul class="ml" style="margin: 0; padding: 8px 0 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 20px; font-weight: 500; min-width: 200px"><li><a href="services.html">Planning sessions</a></li><li><a href="services.html">Keep your report current</a></li><li><a href="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/c2d577650072c2f30d2015f6df02c8b4">Sample report (PDF)</a></li><li><a href="pricing.html">Pricing and process</a></li><li><a href="quote.html">Request a proposal</a></li></ul></div></div></div><a class="nl" href="pricing.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Pricing</a><div class="dd"><a class="nl" href="areas.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Areas<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" style="margin-left: 6px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a><div class="mega"><div style="max-width: 1160px; margin: 0 auto; padding: 36px 48px 44px; display: flex; justify-content: center; gap: 48px"><div style="display: flex; gap: 40px"><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Vancouver, Burnaby and nearby</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="vancouver.html">Vancouver</a></li><li><a href="burnaby.html">Burnaby</a></li><li><a href="new-westminster.html">New Westminster</a></li><li><a href="richmond.html">Richmond</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">North Shore</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="north-vancouver.html">North Vancouver</a></li><li><a href="west-vancouver.html">West Vancouver</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Tri-Cities and Ridge Meadows</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="coquitlam.html">Coquitlam</a></li><li><a href="maple-ridge.html">Maple Ridge</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">South of the Fraser</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="surrey.html">Surrey</a></li><li><a href="delta.html">Delta</a></li><li><a href="white-rock.html">White Rock</a></li><li><a href="langley.html">Langley</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Fraser Valley</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="abbotsford.html">Abbotsford</a></li></ul></div></div><div style="width: 1px; background: var(--line-200)"></div><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 20px; font-weight: 500; min-width: 180px"><li><a href="areas.html">All service areas</a></li><li><a href="areas.html">Deadlines by region</a></li><li><a href="quote.html">Request a proposal</a></li></ul></div></div></div><a class="nl" href="about.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">About</a><a class="nl" href="faq.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">FAQ</a><a class="nl" href="blog.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Blog</a>
+</nav>
+<div style="flex: 1 1 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px">
+<a class="nav-cta" href="quote.html" aria-current="page" style="padding: 10px 18px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 4px; white-space: nowrap"><span class="cta-d">Request a proposal</span><span class="cta-m">Get a proposal</span></a>
+<details class="mnav"><summary aria-label="Open menu"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20" stroke="#18221D" stroke-width="1.6"></path></svg></summary><div class="menu"><a href="index.html">Home</a><a href="services.html">Services and planning sessions</a><a href="pricing.html">Pricing and process</a><a href="areas.html">Service areas</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ and contact</a><a href="quote.html" aria-current="page">Request a proposal</a></div></details>
+</div>
+</div>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="quote" class="ph">
+<div style="max-width: 1160px; margin: 0 auto; padding: 72px 48px 80px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass-600)">Proposal</span>
+<h1 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 44px; line-height: 50px; letter-spacing: -0.01em">Request a proposal</h1>
+<div style="width: 56px; height: 3px; background: var(--evergreen-700)"></div>
+<p style="margin: 0; color: var(--ink-600)">Tell us about your property and the records you have. We review every request and email a written proposal with a fixed fee, usually within one business day.</p>
+<p style="margin: 0; padding: 12px 16px; border-left: 3px solid var(--evergreen-700); background: var(--mist-100); font-size: 15px; line-height: 23px"><b>No obligation.</b> Send your request by March 1, 2027 and secure 10% off your depreciation report fee.</p>
+<p style="margin: 0; color: var(--ink-600)">Not sure about a number? Give your best estimate. You will receive a copy of your answers by email.</p>
+<p style="margin: 0; color: var(--ink-600)">Our fee is based on the information you provide. If it turns out to be incorrect or incomplete, we may revise the fee before work starts.</p>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: var(--ink-600)">Just a question? <a href="faq.html">Send us a message</a>.</p>
+</div>
+<form name="proposal" method="POST" data-netlify="true" data-netlify-honeypot="website" style="flex: 999 1 560px; min-width: 0; background: var(--surface); border: 1px solid var(--line-200); border-radius: 4px; padding: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px"><input type="hidden" name="form-name" value="proposal">
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
+<p style="grid-column: 1 / -1; margin: 0; font-size: 15px; font-weight: 600">The property</p>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Strata plan number<input name="plan" type="text" required="" placeholder="e.g. EPS1234" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property name<input name="property" type="text" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<div style="grid-column: 1 / -1"><label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Street address<input name="address" type="text" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">City<input name="city" type="text" required="" placeholder="e.g. Burnaby" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Building type<select name="type" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="townhouse">Townhouse</option><option value="lowrise">Low-rise, under 6 storeys</option><option value="highrise">High-rise, 6 storeys or more</option><option value="commercial">Commercial strata</option><option value="industrial">Industrial strata</option><option value="mixed">Mixed or more than one type</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Number of strata lots<input name="lots" type="number" inputmode="numeric" required="" min="2" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Number of buildings<input name="buildings" type="number" inputmode="numeric" required="" min="1" placeholder="e.g. 1" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Storeys, tallest building<input name="storeys" type="number" required="" min="1" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Year built<input name="year" type="number" required="" placeholder="e.g. 1995" min="1900" max="2030" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Elevators?<select name="elevators" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option></select></label>
+
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Who manages the strata?<select name="managed" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="self">Self-managed council</option><option value="pm">Property management company</option></select></label>
+<label class="if-pm" style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property management company name<input name="pmCompany" type="text" placeholder="e.g. ABC Property Management" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Does the strata have sections?<select name="sections" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="no">No</option><option value="yes">Yes</option><option value="unsure">Not sure</option></select></label>
+<label class="if-sec" style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">How many sections, and what are they?<input name="sectionsDetail" type="text" placeholder="e.g. 2 sections: residential and commercial" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<p style="grid-column: 1 / -1; margin: -6px 0 0; font-size: 13px; line-height: 20px; color: var(--ink-600)">Some stratas are divided into sections, for example residential and commercial, or townhouses and apartments. Each section may need its own funding plan.</p>
+
+<fieldset style="grid-column: 1 / -1; border: 0; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px">
+<legend style="font-size: 14px; font-weight: 600; margin-bottom: 10px">Shared features (tick any that apply)</legend>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="parkade" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Underground parkade</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="pool" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Pool or hot tub</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="amenity" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Amenity room or building</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="commercial" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Commercial units</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="roofdeck" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Roof deck or podium garden</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="lowcarbon" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Heat pumps, solar or EV charging</label>
+</fieldset>
+<p style="grid-column: 1 / -1; margin: 16px 0 0; padding-top: 16px; border-top: 1px solid var(--line-200); font-size: 15px; font-weight: 600">Records you can share</p>
+<fieldset style="grid-column: 1 / -1; border: 0; margin: 0; padding: 0; display: grid; gap: 10px">
+<legend style="font-size: 14px; color: var(--ink-600); margin-bottom: 10px; font-weight: 400">More complete records lower your fee.</legend>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="fs" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Financial statements for the last two years</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="crf" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Contingency reserve fund opening balance, closing balance and contributions</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="agm" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">AGM and council minutes for the last two years</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="prev" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Previous depreciation report</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="invoices" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Invoices for roof, building envelope or elevator work in the last five years</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="drawings" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Building drawings or plans</label>
+</fieldset>
+<p style="grid-column: 1 / -1; margin: 16px 0 0; padding-top: 16px; border-top: 1px solid var(--line-200); font-size: 15px; font-weight: 600">Your details</p>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Your name<input name="name" type="text" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Your role<select name="role" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="council">Council member</option><option value="pm">Property manager</option><option value="owner">Owner</option><option value="other">Other</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Email<input name="email" type="email" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input name="phone" type="tel" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">When do you need the report?<select name="timing" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="flexible">Flexible</option><option value="3m">Within 3 months</option><option value="agm">Before our next AGM</option><option value="urgent">Urgently, within 6 weeks</option></select></label>
+<label class="if-agm" style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Date of your next AGM<input name="agmDate" type="date" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Anything else we should know?<textarea name="notes" rows="3" placeholder="Recent major projects, known problems, AGM date" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></textarea></label>
+<label style="grid-column: 1 / -1; display: flex; gap: 10px; align-items: flex-start; font-size: 14px; font-weight: 400; color: var(--ink-600)"><input type="checkbox" name="consent" value="yes" required="" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">I confirm the information above is accurate to the best of my knowledge, and I understand the fee may be revised if it is not. Ashgrove Strata Advisors may use this information to prepare a proposal and contact me about it.</label>
+<button class="btn-p" type="submit" style="grid-column: 1 / -1; padding: 14px 20px; font-size: 16px; font-weight: 600; color: #FFFFFF; background: var(--evergreen-700); border: none; border-radius: 2px; cursor: pointer; font-family: inherit">Send request</button>
+</form>
+</div>
+</section>
+
+</main>
+
+<footer class="ft" style="background: var(--evergreen-900); color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 64px 48px; display: flex; flex-wrap: wrap; gap: 40px 56px">
+<div style="flex: 2 1 300px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px"><svg width="26" height="29" viewBox="0 0 40 44" aria-hidden="true"><path fill="#FFFFFF" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#FFFFFF" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg><span style="font-size: 17px; font-weight: 600">Ashgrove Strata Advisors</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: var(--mist-100); max-width: 340px">Depreciation reports, insurance appraisals and property appraisals in Metro Vancouver and the Fraser Valley, by an Accredited Appraiser (AACI, MRICS).</p>
+<p style="margin: 0; font-size: 15px; line-height: 26px; color: var(--mist-100)">[Phone]<br>[Email]</p>
+<a class="btn-w" href="quote.html" style="align-self: flex-start; margin-top: 4px; padding: 12px 22px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 2px">Request a proposal</a>
+</div>
+<nav aria-label="Footer" style="flex: 1 1 150px">
+<p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Pages</p>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 24px"><li style="padding: 3px 0"><a href="index.html">Home</a></li><li style="padding: 3px 0"><a href="services.html">Services</a></li><li style="padding: 3px 0"><a href="pricing.html">Pricing</a></li><li style="padding: 3px 0"><a href="areas.html">Service areas</a></li><li style="padding: 3px 0"><a href="about.html">About</a></li><li style="padding: 3px 0"><a href="faq.html">FAQ</a></li><li style="padding: 3px 0"><a href="blog.html">Blog</a></li><li style="padding: 3px 0"><a href="quote.html">Request a proposal</a></li></ul>
+</nav>
+<nav aria-label="Service areas" style="flex: 2 1 300px">
+<p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Service areas</p>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 24px; columns: 2; column-gap: 24px"><li style="padding: 3px 0"><a href="abbotsford.html">Abbotsford</a></li><li style="padding: 3px 0"><a href="burnaby.html">Burnaby</a></li><li style="padding: 3px 0"><a href="coquitlam.html">Coquitlam</a></li><li style="padding: 3px 0"><a href="delta.html">Delta</a></li><li style="padding: 3px 0"><a href="langley.html">Langley</a></li><li style="padding: 3px 0"><a href="maple-ridge.html">Maple Ridge</a></li><li style="padding: 3px 0"><a href="new-westminster.html">New Westminster</a></li><li style="padding: 3px 0"><a href="north-vancouver.html">North Vancouver</a></li><li style="padding: 3px 0"><a href="richmond.html">Richmond</a></li><li style="padding: 3px 0"><a href="surrey.html">Surrey</a></li><li style="padding: 3px 0"><a href="vancouver.html">Vancouver</a></li><li style="padding: 3px 0"><a href="west-vancouver.html">West Vancouver</a></li><li style="padding: 3px 0"><a href="white-rock.html">White Rock</a></li></ul>
+</nav>
+</div>
+<div style="border-top: 1px solid var(--evergreen-700)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 24px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; line-height: 20px; color: var(--sage-300)">
+<span>© 2026 Ashgrove Strata Advisors · Metro Vancouver, BC</span>
+<span>Depreciation reports · Insurance appraisals · Commercial appraisals · Residential appraisals</span>
+</div>
+</div>
+</footer>
+
+
+</div></div>
+<template id="dc-tpl"><div style="font-family: var(--font-sans); color: var(--ink-900); background: var(--paper-050); min-height: 100vh; font-size: 16px; line-height: 26px">
+
+<header style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: var(--paper-050)">
+<div class="annc" style="height: 40px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; justify-content: center; gap: 14px; background: var(--mist-100); font-size: 14px; line-height: 18px; color: var(--ink-900)">
+<span class="annc-d">Send a no-obligation quote request by March 1, 2027 and secure 10% off</span><span class="annc-m">10% off by March 1, 2027</span>
+<a class="annc-btn" href="quote.html" style="flex: none; padding: 5px 12px; font-size: 13px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 3px">Get a quote</a>
+</div>
+<div style="border-bottom: 1px solid var(--line-200); background: var(--paper-050); position: relative; z-index: 3">
+<div style="max-width: 1240px; height: 76px; box-sizing: border-box; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<a href="index.html" style="flex: 1 1 0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink-900)">
+<svg width="26" height="29" viewBox="0 0 40 44" aria-hidden="true"><path fill="#1F4D3A" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#1F4D3A" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg>
+<span class="brand" style="font-size: 17px; font-weight: 600; letter-spacing: 0.01em; white-space: nowrap">Ashgrove Strata Advisors</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 2px">
+<div class="dd"><a class="nl" href="services.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Services<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" style="margin-left: 6px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a><div class="mega"><div style="max-width: 1160px; margin: 0 auto; padding: 36px 48px 44px; display: flex; justify-content: center; gap: 48px"><div style="display: flex; gap: 24px"><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7314f01aa58671c3a3eafa919328f1ff" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Depreciation reports</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/7ce678e96ebe20a8d23ffa6cc40313b1" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Insurance appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/49484681170f915203054e55aed9a1f0" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Commercial appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a><a class="mt" href="services.html" style="width: 176px"><span style="display: block; width: 176px; height: 116px; border-radius: 8px; overflow: hidden; background: var(--mist-100)"><img src="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/2197f17bbb98c267932f4669ac644cfb" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block"></span><span style="font-size: 16px; line-height: 22px; font-weight: 600">Residential appraisals</span><span class="mt-l" style="font-size: 13px; line-height: 18px; text-decoration: underline; color: var(--ink-600)">Learn</span></a></div><div style="width: 1px; background: var(--line-200)"></div><ul class="ml" style="margin: 0; padding: 8px 0 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 20px; font-weight: 500; min-width: 200px"><li><a href="services.html">Planning sessions</a></li><li><a href="services.html">Keep your report current</a></li><li><a href="https://90aa961e-a7c4-4c78-8ee4-d018672e4430.frame.claudeusercontent.com/_blob/c2d577650072c2f30d2015f6df02c8b4">Sample report (PDF)</a></li><li><a href="pricing.html">Pricing and process</a></li><li><a href="quote.html">Request a proposal</a></li></ul></div></div></div><a class="nl" href="pricing.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Pricing</a><div class="dd"><a class="nl" href="areas.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Areas<svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" style="margin-left: 6px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg></a><div class="mega"><div style="max-width: 1160px; margin: 0 auto; padding: 36px 48px 44px; display: flex; justify-content: center; gap: 48px"><div style="display: flex; gap: 40px"><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Vancouver, Burnaby and nearby</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="vancouver.html">Vancouver</a></li><li><a href="burnaby.html">Burnaby</a></li><li><a href="new-westminster.html">New Westminster</a></li><li><a href="richmond.html">Richmond</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">North Shore</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="north-vancouver.html">North Vancouver</a></li><li><a href="west-vancouver.html">West Vancouver</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Tri-Cities and Ridge Meadows</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="coquitlam.html">Coquitlam</a></li><li><a href="maple-ridge.html">Maple Ridge</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">South of the Fraser</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="surrey.html">Surrey</a></li><li><a href="delta.html">Delta</a></li><li><a href="white-rock.html">White Rock</a></li><li><a href="langley.html">Langley</a></li></ul></div><div style="min-width: 150px"><p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-600)">Fraser Valley</p><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 20px; font-weight: 500"><li><a href="abbotsford.html">Abbotsford</a></li></ul></div></div><div style="width: 1px; background: var(--line-200)"></div><ul class="ml" style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 20px; font-weight: 500; min-width: 180px"><li><a href="areas.html">All service areas</a></li><li><a href="areas.html">Deadlines by region</a></li><li><a href="quote.html">Request a proposal</a></li></ul></div></div></div><a class="nl" href="about.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">About</a><a class="nl" href="faq.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">FAQ</a><a class="nl" href="blog.html" style="display: inline-flex; align-items: center; padding: 8px 14px; font-size: 15px; font-weight: 500; text-decoration: none; color: var(--ink-900)">Blog</a>
+</nav>
+<div style="flex: 1 1 0; display: flex; justify-content: flex-end; align-items: center; gap: 10px">
+<a class="nav-cta" href="quote.html" aria-current="page" style="padding: 10px 18px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; background: var(--evergreen-700); border-radius: 4px; white-space: nowrap"><span class="cta-d">Request a proposal</span><span class="cta-m">Get a proposal</span></a>
+<details class="mnav"><summary aria-label="Open menu"><svg width="20" height="14" viewBox="0 0 20 14" aria-hidden="true"><path d="M0 1h20M0 7h20M0 13h20" stroke="#18221D" stroke-width="1.6"></path></svg></summary><div class="menu"><a href="index.html">Home</a><a href="services.html">Services and planning sessions</a><a href="pricing.html">Pricing and process</a><a href="areas.html">Service areas</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="faq.html">FAQ and contact</a><a href="quote.html" aria-current="page">Request a proposal</a></div></details>
+</div>
+</div>
+</div>
+<div class="scrim" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="quote" class="ph">
+<div style="max-width: 1160px; margin: 0 auto; padding: 72px 48px 80px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brass-600)">Proposal</span>
+<h1 style="margin: 0; font-family: var(--font-serif); font-weight: 500; font-size: 44px; line-height: 50px; letter-spacing: -0.01em">Request a proposal</h1>
+<div style="width: 56px; height: 3px; background: var(--evergreen-700)"></div>
+<p style="margin: 0; color: var(--ink-600)">Tell us about your property and the records you have. We review every request and email a written proposal with a fixed fee, usually within one business day.</p>
+<p style="margin: 0; padding: 12px 16px; border-left: 3px solid var(--evergreen-700); background: var(--mist-100); font-size: 15px; line-height: 23px"><b>No obligation.</b> Send your request by March 1, 2027 and secure 10% off your depreciation report fee.</p>
+<p style="margin: 0; color: var(--ink-600)">Not sure about a number? Give your best estimate. You will receive a copy of your answers by email.</p>
+<p style="margin: 0; color: var(--ink-600)">Our fee is based on the information you provide. If it turns out to be incorrect or incomplete, we may revise the fee before work starts.</p>
+<p style="margin: 0; font-size: 14px; line-height: 22px; color: var(--ink-600)">Just a question? <a href="faq.html">Send us a message</a>.</p>
+</div>
+<form name="proposal" method="POST" data-netlify="true" data-netlify-honeypot="website" style="flex: 999 1 560px; min-width: 0; background: var(--surface); border: 1px solid var(--line-200); border-radius: 4px; padding: 32px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px"><input type="hidden" name="form-name" value="proposal">
+<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px">
+<p style="grid-column: 1 / -1; margin: 0; font-size: 15px; font-weight: 600">The property</p>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Strata plan number<input name="plan" type="text" required="" placeholder="e.g. EPS1234" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property name<input name="property" type="text" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<div style="grid-column: 1 / -1"><label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Street address<input name="address" type="text" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">City<input name="city" type="text" required="" placeholder="e.g. Burnaby" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Building type<select name="type" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="townhouse">Townhouse</option><option value="lowrise">Low-rise, under 6 storeys</option><option value="highrise">High-rise, 6 storeys or more</option><option value="commercial">Commercial strata</option><option value="industrial">Industrial strata</option><option value="mixed">Mixed or more than one type</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Number of strata lots<input name="lots" type="number" inputmode="numeric" required="" min="2" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Number of buildings<input name="buildings" type="number" inputmode="numeric" required="" min="1" placeholder="e.g. 1" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Storeys, tallest building<input name="storeys" type="number" required="" min="1" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Year built<input name="year" type="number" required="" placeholder="e.g. 1995" min="1900" max="2030" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Elevators?<select name="elevators" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option></select></label>
+
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Who manages the strata?<select name="managed" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="self">Self-managed council</option><option value="pm">Property management company</option></select></label>
+<label class="if-pm" style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property management company name<input name="pmCompany" type="text" placeholder="e.g. ABC Property Management" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Does the strata have sections?<select name="sections" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="no">No</option><option value="yes">Yes</option><option value="unsure">Not sure</option></select></label>
+<label class="if-sec" style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">How many sections, and what are they?<input name="sectionsDetail" type="text" placeholder="e.g. 2 sections: residential and commercial" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<p style="grid-column: 1 / -1; margin: -6px 0 0; font-size: 13px; line-height: 20px; color: var(--ink-600)">Some stratas are divided into sections, for example residential and commercial, or townhouses and apartments. Each section may need its own funding plan.</p>
+
+<fieldset style="grid-column: 1 / -1; border: 0; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px">
+<legend style="font-size: 14px; font-weight: 600; margin-bottom: 10px">Shared features (tick any that apply)</legend>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="parkade" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Underground parkade</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="pool" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Pool or hot tub</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="amenity" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Amenity room or building</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="commercial" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Commercial units</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="roofdeck" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Roof deck or podium garden</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="features" value="lowcarbon" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Heat pumps, solar or EV charging</label>
+</fieldset>
+<p style="grid-column: 1 / -1; margin: 16px 0 0; padding-top: 16px; border-top: 1px solid var(--line-200); font-size: 15px; font-weight: 600">Records you can share</p>
+<fieldset style="grid-column: 1 / -1; border: 0; margin: 0; padding: 0; display: grid; gap: 10px">
+<legend style="font-size: 14px; color: var(--ink-600); margin-bottom: 10px; font-weight: 400">More complete records lower your fee.</legend>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="fs" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Financial statements for the last two years</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="crf" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Contingency reserve fund opening balance, closing balance and contributions</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="agm" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">AGM and council minutes for the last two years</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="prev" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Previous depreciation report</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="invoices" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Invoices for roof, building envelope or elevator work in the last five years</label>
+<label style="display: flex; gap: 10px; align-items: flex-start; font-size: 15px; font-weight: 400"><input type="checkbox" name="records" value="drawings" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">Building drawings or plans</label>
+</fieldset>
+<p style="grid-column: 1 / -1; margin: 16px 0 0; padding-top: 16px; border-top: 1px solid var(--line-200); font-size: 15px; font-weight: 600">Your details</p>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Your name<input name="name" type="text" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Your role<select name="role" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="">Choose one</option><option value="council">Council member</option><option value="pm">Property manager</option><option value="owner">Owner</option><option value="other">Other</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Email<input name="email" type="email" required="" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input name="phone" type="tel" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">When do you need the report?<select name="timing" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"><option value="flexible">Flexible</option><option value="3m">Within 3 months</option><option value="agm">Before our next AGM</option><option value="urgent">Urgently, within 6 weeks</option></select></label>
+<label class="if-agm" style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Date of your next AGM<input name="agmDate" type="date" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></label>
+<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Anything else we should know?<textarea name="notes" rows="3" placeholder="Recent major projects, known problems, AGM date" style="padding: 12px 14px; font-size: 16px; border: 1px solid var(--line-200); border-radius: 2px; font-family: inherit; background: var(--surface)"></textarea></label>
+<label style="grid-column: 1 / -1; display: flex; gap: 10px; align-items: flex-start; font-size: 14px; font-weight: 400; color: var(--ink-600)"><input type="checkbox" name="consent" value="yes" required="" style="margin-top: 3px; width: 18px; height: 18px; accent-color: #1F4D3A">I confirm the information above is accurate to the best of my knowledge, and I understand the fee may be revised if it is not. Ashgrove Strata Advisors may use this information to prepare a proposal and contact me about it.</label>
+<button class="btn-p" type="submit" style="grid-column: 1 / -1; padding: 14px 20px; font-size: 16px; font-weight: 600; color: #FFFFFF; background: var(--evergreen-700); border: none; border-radius: 2px; cursor: pointer; font-family: inherit">Send request</button>
+</form>
+</div>
+</section>
+
+</main>
+
+<footer class="ft" style="background: var(--evergreen-900); color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 64px 48px; display: flex; flex-wrap: wrap; gap: 40px 56px">
+<div style="flex: 2 1 300px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; align-items: center; gap: 12px"><svg width="26" height="29" viewBox="0 0 40 44" aria-hidden="true"><path fill="#FFFFFF" fill-rule="evenodd" d="M20 2 L39 19 L35 19 L35 43 L5 43 L5 19 L1 19 Z M9 20 V40 H31 V20 L20 10 Z"></path><path fill="#FFFFFF" d="M20 14 L26 22 L23.5 22 L28 29 L22 29 L22 37 L18 37 L18 29 L12 29 L16.5 22 L14 22 Z"></path></svg><span style="font-size: 17px; font-weight: 600">Ashgrove Strata Advisors</span></div>
+<p style="margin: 0; font-size: 15px; line-height: 24px; color: var(--mist-100); max-width: 340px">Depreciation reports, insurance appraisals and property appraisals in Metro Vancouver and the Fraser Valley, by an Accredited Appraiser (AACI, MRICS).</p>
+<p style="margin: 0; font-size: 15px; line-height: 26px; color: var(--mist-100)">[Phone]<br>[Email]</p>
+<a class="btn-w" href="quote.html" style="align-self: flex-start; margin-top: 4px; padding: 12px 22px; font-size: 15px; font-weight: 600; text-decoration: none; color: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 2px">Request a proposal</a>
+</div>
+<nav aria-label="Footer" style="flex: 1 1 150px">
+<p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Pages</p>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 24px"><li style="padding: 3px 0"><a href="index.html">Home</a></li><li style="padding: 3px 0"><a href="services.html">Services</a></li><li style="padding: 3px 0"><a href="pricing.html">Pricing</a></li><li style="padding: 3px 0"><a href="areas.html">Service areas</a></li><li style="padding: 3px 0"><a href="about.html">About</a></li><li style="padding: 3px 0"><a href="faq.html">FAQ</a></li><li style="padding: 3px 0"><a href="blog.html">Blog</a></li><li style="padding: 3px 0"><a href="quote.html">Request a proposal</a></li></ul>
+</nav>
+<nav aria-label="Service areas" style="flex: 2 1 300px">
+<p style="margin: 0 0 12px; font-size: 12px; line-height: 16px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sage-300)">Service areas</p>
+<ul style="margin: 0; padding: 0; list-style: none; font-size: 15px; line-height: 24px; columns: 2; column-gap: 24px"><li style="padding: 3px 0"><a href="abbotsford.html">Abbotsford</a></li><li style="padding: 3px 0"><a href="burnaby.html">Burnaby</a></li><li style="padding: 3px 0"><a href="coquitlam.html">Coquitlam</a></li><li style="padding: 3px 0"><a href="delta.html">Delta</a></li><li style="padding: 3px 0"><a href="langley.html">Langley</a></li><li style="padding: 3px 0"><a href="maple-ridge.html">Maple Ridge</a></li><li style="padding: 3px 0"><a href="new-westminster.html">New Westminster</a></li><li style="padding: 3px 0"><a href="north-vancouver.html">North Vancouver</a></li><li style="padding: 3px 0"><a href="richmond.html">Richmond</a></li><li style="padding: 3px 0"><a href="surrey.html">Surrey</a></li><li style="padding: 3px 0"><a href="vancouver.html">Vancouver</a></li><li style="padding: 3px 0"><a href="west-vancouver.html">West Vancouver</a></li><li style="padding: 3px 0"><a href="white-rock.html">White Rock</a></li></ul>
+</nav>
+</div>
+<div style="border-top: 1px solid var(--evergreen-700)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 24px 48px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; line-height: 20px; color: var(--sage-300)">
+<span>© 2026 Ashgrove Strata Advisors · Metro Vancouver, BC</span>
+<span>Depreciation reports · Insurance appraisals · Commercial appraisals · Residential appraisals</span>
+</div>
+</div>
+</footer>
+
+
+</div></template>
+<script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+dcStart(Component, {});
+</script>
+</body>
+</html>
